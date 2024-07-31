@@ -1,5 +1,5 @@
-import { restService } from '../services/rest.service.js'
-import { userService } from '../services/user.service.js'
+import { restService } from '../services/rest.service.local.js'
+// import { userService } from '../services/user.service.js'
 import { store } from './store.js'
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { ADD_TO_CART, CLEAR_CART, REMOVE_FROM_CART, SET_RESTS } from './rest.reducer.js'
@@ -8,11 +8,12 @@ import { LOADING_DONE, LOADING_START } from './loading.reducer.js'
 
 
 
-export async function loadStays() {
+export async function loadRests() {
 
-    store.dispatch({ type: 'LOADING_START', isLoading: true })
+    // store.dispatch({ type: 'LOADING_START', isLoading: true })
     try {
         const rests = await restService.query()
+        console.log('loadRests', rests);
         store.dispatch({
             type: SET_RESTS,
             rests,
@@ -21,7 +22,7 @@ export async function loadStays() {
         console.error('Cannot load rests', err)
         throw err
     } finally {
-        store.dispatch({ type: 'LOADING_DONE', isLoading: false })
+        // store.dispatch({ type: 'LOADING_DONE', isLoading: false })
     }
 }
 
