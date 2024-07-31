@@ -1,0 +1,181 @@
+{
+    "restaurants": [
+        {
+            "id": "33517412811",
+            "category": "Hamburger",
+            "name": "American Graffiti",
+            "address": {
+                "street": "Via Marco Decumio 14",
+                "postalCode": "00174",
+                "city": "Roma"
+            },
+            "image": "American Graffiti.jpg",
+            "rating": 4.5,
+            "shipping": {
+                "freeShipping": false,
+                "shippingCost": 2.5,
+                "minOrder": 12
+            },
+            "menu": {
+                "Menu Combo": [
+                    {
+                        "name": "Hamburger Menu",
+                        "price": 8.0
+                    },
+                    {
+                        "name": "Cheeseburger Menu",
+                        "price": 9.5
+                    },
+                    {
+                        "name": "Bacon Cheeseburger Menu",
+                        "price": 10.5
+                    },
+                    {
+                        "name": "Doppio Cheeseburger Menu",
+                        "price": 12.5
+                    },
+                    {
+                        "name": "Doppio Bacon Cheeseburger Menu",
+                        "price": 13.5
+                    },
+                    {
+                        "name": "Smoke Burger Menu",
+                        "price": 14.5
+                    }
+                ],
+                "Hot Dog": [
+                    {
+                        "name": "Hot Dog Plain",
+                        "price": 8.0
+                    },
+                    {
+                        "name": "Chorizo Hot Dog",
+                        "price": 9.0
+                    },
+                    {
+                        "name": "Hot Dog Messicano",
+                        "price": 11.5
+                    },
+                    {
+                        "name": "Super Hot Dog",
+                        "price": 12.0
+                    }
+                ],
+                "Fritti": [
+                    {
+                        "name": "Patatine Dipper",
+                        "price": 6.5
+                    },
+                    {
+                        "name": "Patatine Fritte Speziate",
+                        "price": 6.0
+                    },
+                    {
+                        "name": "Patatine a Fette con Buccia",
+                        "price": 6.5
+                    },
+                    {
+                        "name": "Patatine con Bacon, Barbecue e Uovo",
+                        "price": 9.0
+                    },
+                    {
+                        "name": "Wrustel Chips",
+                        "price": 9.5
+                    },
+                    {
+                        "name": "Anelli di Peperoni Pastellati",
+                        "price": 7.5
+                    }
+                ],
+                "Bevande e Alcolici": [
+                    {
+                        "name": "Bibita in Lattina",
+                        "price": 2.5
+                    },
+                    {
+                        "name": "Bibita 1,5L",
+                        "price": 4.0
+                    },
+                    {
+                        "name": "Birra 33cl",
+                        "price": 4.0
+                    },
+                    {
+                        "name": "Bibita 66cl",
+                        "price": 5.0
+                    }
+                ],
+                "Dolci": [
+                    {
+                        "name": "Churros Dulce De Leche",
+                        "price": 8.5
+                    },
+                    {
+                        "name": "Churros Cioccolato Bianco",
+                        "price": 8.5
+                    },
+                    {
+                        "name": "Churros Nutella",
+                        "price": 8.5
+                    },
+                    {
+                        "name": "Tiramisu alla Nutella",
+                        "price": 8.5
+                    },
+                    {
+                        "name": "Tiramisu Classico",
+                        "price": 7.0
+                    }
+                ]
+            },
+            "reviews": [
+                {
+                    "id": 201,
+                    "userId": 301,
+                    "rating": 5,
+                    "content": "Great burger, excellent service!",
+                    "date": "2024-07-01"
+                },
+                {
+                    "id": 204,
+                    "userId": 304,
+                    "rating": 5,
+                    "content": "Best burger in town, I'll come back again!",
+                    "date": "2024-07-04"
+                }
+            ],
+            "orders": [
+                {
+                    "id": 401,
+                    "userId": 301,
+                    "dishes": [
+                        {
+                            "name": "Hamburger Menu",
+                            "price": 8.0
+                        },
+                        {
+                            "name": "Patatine Dipper",
+                            "price": 6.5
+                        }
+                    ],
+                    "totalPrice": 14.5,
+                    "orderDate": "2024-07-05 18:30",
+                    "status": "Completed"
+                },
+                {
+                    "id": 404,
+                    "userId": 304,
+                    "dishes": [
+                        {
+                            "name": "Cheeseburger Menu",
+                            "price": 9.5
+                        }
+                    ],
+                    "totalPrice": 9.5,
+                    "orderDate": "2024-07-05 20:00",
+                    "status": "Pending"
+                }
+            ]
+        }
+    ]
+}

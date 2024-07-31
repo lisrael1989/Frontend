@@ -12,7 +12,7 @@ export const utilService = {
   getStars,
   getNumOfDays,
   formatIsoDateToYMD,
-  formatStayDateRange,
+  formatRestDateRange,
   haversineDistance,
   formatIsoDateToYMDDashboard,
 };
@@ -136,17 +136,17 @@ function formatDate(date) {
   return `${monthNames[monthIndex]} ${day}`;
 }
 
-function getStarsWithRating(stay) {
-  if (!stay.reviews || stay.reviews.length === 0) {
+function getStarsWithRating(rest) {
+  if (!rest.reviews || rest.reviews.length === 0) {
     return { stars: 'No reviews yet', averageRating: 0 };
   }
 
-  const totalRating = stay.reviews.reduce(
+  const totalRating = rest.reviews.reduce(
     (acc, review) => acc + review.rate,
     0
   );
   // Calculate the average and round to 3 decimal places, then convert back to number
-  const averageRating = Number((totalRating / stay.reviews.length).toFixed(2));
+  const averageRating = Number((totalRating / rest.reviews.length).toFixed(2));
   let stars = '';
 
   for (let i = 1; i <= Math.floor(averageRating); i++) {
@@ -166,16 +166,16 @@ function getStarsWithRating(stay) {
   return { stars, averageRating };
 }
 
-function getStars(stay) {
-  if (!stay.reviews || stay.reviews.length === 0) {
+function getStars(rest) {
+  if (!rest.reviews || rest.reviews.length === 0) {
     return 'No reviews yet';
   }
 
-  const totalRating = stay.reviews.reduce(
+  const totalRating = rest.reviews.reduce(
     (acc, review) => acc + review.rate,
     0
   );
-  const averageRating = totalRating / stay.reviews.length;
+  const averageRating = totalRating / rest.reviews.length;
   let stars = '';
 
   for (let i = 1; i <= Math.floor(averageRating); i++) {
@@ -219,9 +219,9 @@ function formatIsoDateToYMDDashboard(isoDateString) {
   return `${day}/${month}/${year}`;
 }
 
-function formatStayDateRange(stay) {
-  const checkInDate = new Date(stay.dates.checkIn);
-  const checkOutDate = new Date(stay.dates.checkOut);
+function formatRestDateRange(rest) {
+  const checkInDate = new Date(rest.dates.checkIn);
+  const checkOutDate = new Date(rest.dates.checkOut);
 
   const checkInMonth = checkInDate.toLocaleDateString('en-US', {
     month: 'short',
