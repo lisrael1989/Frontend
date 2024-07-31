@@ -1,7 +1,8 @@
 export function Header() {
-    return (
-        <header>
-            <h1>gooo App</h1>
-        </header>
-    )
+  return (
+    <header>
+      <img src="public/img/JET-White.png" alt="" />
+      <h2 className="login">Login</h2>
+    </header>
+  );
 }
