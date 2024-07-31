@@ -2,7 +2,7 @@
   "restaurants": [
     {
       "id": "33517412811",
-      "category": "Hamburger",
+      "category": ["Hamburgers", "BBQ"],
       "name": "American Graffiti",
       "address": {
         "street": "Via Marco Decumio 14",
@@ -13,7 +13,7 @@
       "rating": 4.5,
       "shipping": {
         "freeShipping": false,
-        "shippingCost": 2.5,
+        "shippingCost": "2.5",
         "minOrder": 12
       },
       "menu": {
