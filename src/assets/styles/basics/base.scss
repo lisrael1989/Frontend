@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  font-family: Montserrat;
+  line-height: 1.6;
+  color: $black2;
+}
+
+body {
+  font-size: rem(16px);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+section,
+main,
+footer {
+  padding: 5px;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
