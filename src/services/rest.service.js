@@ -20,6 +20,6 @@ async function query(filterBy) {
   return httpService.get(BASE_URL, { params: { filterBy } });
 }
 
-function getById(stayId) {
-  return httpService.get(`stay/${stayId}`);
+function getById(restId) {
+  return httpService.get(`rest/${restId}`);
 }
