@@ -4,8 +4,8 @@ export function RestList({ rests }) {
   return (
     <ul className="rest-list">
       {rests.map((rest) => (
-        <RestPreview rest={rest} key={rest._id} />
+        <RestPreview rest={rest} key={rest.id} />
       ))}
     </ul>
-  );
+  )
 }

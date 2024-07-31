@@ -48,3 +48,7 @@ async function createrests() {
     console.error('Error creating restaurants:', error);
   }
 }
+
+function textFilter() {
+
+}
