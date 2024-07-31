@@ -21,6 +21,13 @@
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
-    "vite": "^5.3.4"
+    "vite": "^5.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.2",
+    "react-router": "^6.16.0",
+    "react-router-dom": "^6.16.0",
+    "redux": "^4.2.1",
+    "axios": "^1.5.0"
   }
 }
