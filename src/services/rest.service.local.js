@@ -3,12 +3,13 @@ import { utilService } from './util.service.js';
 
 import restaurantData from '../data/restaurant_data.json'
 const STORAGE_KEY = 'rest';
-createrests();
+createRests();
 
 export const restService = {
   query,
   getById,
   getLabels,
+  textFilter,
 }
 window.cs = restService;
 
@@ -27,16 +28,35 @@ function getLabels() {
   return labels;
 }
 
-async function query() {
-  var rests = await storageService.query(STORAGE_KEY);
-  return rests;
+async function query(filterBy) {
+  var rests = await storageService.query(STORAGE_KEY)
+
+  if (filterBy.txt) {
+    const regex = new RegExp(filterBy.txt, 'i')
+    rests = rests.filter(rest => {
+      // Check restaurant name
+      if (regex.test(rest.name)) return true
+
+      // Check categories
+      if (rest.category.some(category => regex.test(category))) return true
+
+      // Check menu items
+      for (let menu in rest.menu) {
+        if (rest.menu[menu].some(dish => regex.test(dish.name))) {
+          return true
+        }
+      }
+      return false
+    })
+  }
+  return rests
 }
 
 function getById(restId) {
   return storageService.get(STORAGE_KEY, restId);
 }
 
-async function createrests() {
+async function createRests() {
   try {
     let rests = await utilService.loadFromStorage(STORAGE_KEY);
     if (!rests || rests.length === 0) {
@@ -50,5 +70,5 @@ async function createrests() {
 }
 
 function textFilter() {
-
+  return { txt: '' }
 }
