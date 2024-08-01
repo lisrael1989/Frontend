@@ -1,0 +1,48 @@
+.rest-card {
+  padding: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  width: 270px;
+  height: 280px;
+
+  & .rest-info {
+    padding: 5px;
+
+    & .rest-name {
+      margin: 0;
+      padding-bottom: 5px;
+      font-size: em(16px);
+      color: $title-Black;
+      font-weight: bold;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    & .rest-category {
+      font-size: em(14px);
+      padding-bottom: 5px;
+    }
+
+    & .rest-img {
+      width: 100%;
+      background-color: gray;
+    }
+
+    & .rest-info-bottom {
+      font-size: em(14px);
+      gap: 5px;
+
+      & .rest-rating,
+      .rest-delivery,
+      .rest-delivery-cost,
+      .min-delivery-price {
+        font-size: em(14px);
+        background-color: $light-gray;
+        padding: 3px;
+        color: $text-gray;
+        font-family: TakeawaySans-Regular;
+      }
+    }
+  }
+}
