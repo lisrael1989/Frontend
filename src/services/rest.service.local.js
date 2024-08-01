@@ -10,6 +10,7 @@ export const restService = {
   getById,
   getLabels,
   getDefaultFilter,
+  getSortBy
 };
 window.cs = restService;
 
@@ -78,5 +79,15 @@ async function createRests() {
 }
 
 function getDefaultFilter() {
-  return { txt: '', loc: '' || 'Tel aviv' };
+  return {
+    txt: '',
+    loc: '' || 'Tel aviv',
+    category: '',
+    Preferences: "",
+
+  }
+}
+
+function getSortBy() {
+  sortBy = ""
 }

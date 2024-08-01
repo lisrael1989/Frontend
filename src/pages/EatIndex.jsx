@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { RestList } from '../cmps/RestList.jsx';
 import { useSelector } from 'react-redux';
 import { loadRests } from '../store/rest.actions';
+import { SideFilter } from '../cmps/filters-cmps/SideFilter.jsx';
 
 export function EatIndex() {
     const rests = useSelector(storeState => storeState.restModule.rests)
@@ -12,8 +13,9 @@ export function EatIndex() {
 
     if (!rests) return <div className="loader"></div>
     return (
-        <>
+        <section className="eat-index flex">
+            <SideFilter />
             <RestList rests={rests} />
-        </>
+        </section>
     );
 }

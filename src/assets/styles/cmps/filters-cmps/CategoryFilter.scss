@@ -1,0 +1,42 @@
+.category-filter {
+    width: 305px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 16px;
+
+
+
+    & .category-list {
+        margin: 8px auto 0px;
+        padding: 0px;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+
+        & li {
+            width: calc(33.3333%);
+            height: 72px;
+            display: flex;
+            flex-direction: column;
+            -webkit-box-align: center;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 8px;
+
+            & img {
+                max-width: 40px;
+                max-height: 40px;
+                transform: scale(1.1);
+
+            }
+
+            & p {
+                font-size: em(14px);
+                font-weight: normal;
+                color: rgb(10, 56, 71);
+                cursor: pointer;
+            }
+        }
+
+    }
+}
