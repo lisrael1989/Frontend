@@ -1,7 +1,7 @@
 import { storageService } from './async-storage.service.js';
 import { utilService } from './util.service.js';
 
-import restaurantData from '../data/restaurant_data.json'
+import restaurantData from '../data/restaurant_data.json';
 const STORAGE_KEY = 'rest';
 createRests();
 
@@ -9,8 +9,8 @@ export const restService = {
   query,
   getById,
   getLabels,
-  textFilter,
-}
+  getDefaultFilter,
+};
 window.cs = restService;
 
 function getLabels() {
@@ -29,27 +29,36 @@ function getLabels() {
 }
 
 async function query(filterBy) {
-  var rests = await storageService.query(STORAGE_KEY)
+  var rests = await storageService.query(STORAGE_KEY);
+
+  if (filterBy.loc) {
+    const regex = new RegExp(filterBy.loc, 'i');
+    rests = rests.filter((rest) => {
+      // Check restaurant location
+      if (regex.test(rest.address.city)) return true;
+    });
+    return rests;
+  }
 
   if (filterBy.txt) {
-    const regex = new RegExp(filterBy.txt, 'i')
-    rests = rests.filter(rest => {
+    const regex = new RegExp(filterBy.txt, 'i');
+    rests = rests.filter((rest) => {
       // Check restaurant name
-      if (regex.test(rest.name)) return true
+      if (regex.test(rest.name)) return true;
 
       // Check categories
-      if (rest.category.some(category => regex.test(category))) return true
+      if (rest.category.some((category) => regex.test(category))) return true;
 
       // Check menu items
       for (let menu in rest.menu) {
-        if (rest.menu[menu].some(dish => regex.test(dish.name))) {
-          return true
+        if (rest.menu[menu].some((dish) => regex.test(dish.name))) {
+          return true;
         }
       }
-      return false
-    })
+      return false;
+    });
   }
-  return rests
+  return rests;
 }
 
 function getById(restId) {
@@ -60,7 +69,6 @@ async function createRests() {
   try {
     let rests = await utilService.loadFromStorage(STORAGE_KEY);
     if (!rests || rests.length === 0) {
-
       rests = restaurantData.restaurants;
       utilService.saveToStorage(STORAGE_KEY, rests);
     }
@@ -69,6 +77,6 @@ async function createRests() {
   }
 }
 
-function textFilter() {
-  return { txt: '' }
+function getDefaultFilter() {
+  return { txt: '', loc: '' || 'Tel aviv' };
 }
