@@ -31,7 +31,10 @@ function getLabels() {
 
 async function query(filterBy) {
   var rests = await storageService.query(STORAGE_KEY);
-
+  if (filterBy.category) {
+    const regex = new RegExp(filterBy.category, 'i')
+    rests = rests.filter(rest => regex.test(rest.category))
+  }
   if (filterBy.loc) {
     const regex = new RegExp(filterBy.loc, 'i');
     rests = rests.filter((rest) => {
@@ -57,7 +60,7 @@ async function query(filterBy) {
         }
       }
       return false;
-    });
+    })
   }
   return rests;
 }

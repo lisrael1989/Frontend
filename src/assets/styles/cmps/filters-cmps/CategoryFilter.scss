@@ -22,6 +22,29 @@
             align-items: center;
             cursor: pointer;
             margin-bottom: 8px;
+            cursor: pointer;
+
+            &:hover img {
+                background-color: #ebebeb;
+                transform: scale(1.1);
+                border-radius: 50%;
+            }
+
+            &.faded {
+                opacity: 0.4;
+            }
+
+            &.selected {
+                & img {
+                    background-color: #ebebeb;
+                    transform: scale(1.1);
+                    border-radius: 50%;
+                }
+
+                p {
+                    color: #ff6347;
+                }
+            }
 
             & img {
                 max-width: 40px;

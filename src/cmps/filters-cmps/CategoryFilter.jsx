@@ -1,4 +1,8 @@
-export function CategoryFilter() {
+import { useState } from "react"
+
+export function CategoryFilter({ onSetFilterBy }) {
+    const [selectedCategory, setSelectedCategory] = useState(null)
+
     const categories = [
         { name: 'Asian', url: 'public/img/category-images/asianFusion.png' },
         { name: 'BBQ', url: 'public/img/category-images/meatGrill.png' },
@@ -17,11 +21,26 @@ export function CategoryFilter() {
         { name: 'Patisserie', url: 'public/img/category-images/patisserie.png' },
     ]
 
+
+    function handleCategoryClick(cat) {
+        if (selectedCategory === cat) {
+            setSelectedCategory(null)
+            onSetFilterBy({ category: '' })
+        } else {
+            setSelectedCategory(cat)
+            onSetFilterBy({ category: cat })
+        }
+    }
+
+
     return (
         <section className="category-filter">
             <ul className="category-list">
                 {categories.map((cat) => (
-                    <li key={cat.name}>
+                    <li key={cat.name}
+                        onClick={() => handleCategoryClick(cat.name)}
+                        className={`${selectedCategory && selectedCategory !== cat.name ? 'faded' : ''} 
+                        ${selectedCategory === cat.name ? 'selected' : ''}`}>
                         <img src={cat.url} alt={cat.name} />
                         <p>{cat.name}</p>
                     </li>
