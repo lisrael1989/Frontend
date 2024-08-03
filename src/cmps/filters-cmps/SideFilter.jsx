@@ -15,11 +15,15 @@ export function SideFilter() {
     // }
 
     return (
-        <>
-            {/* <button className="clear-filter-btn" onClick={() => clearFilter()}>Clear</button> */}
+        <aside className="side-filter-container">
+            <div className="filter-header">
+                <p className="filter-title">Filter</p>
+                <button className="clear-filter-btn" onClick={() => clearFilter()}>Clear</button>
+            </div>
             <CategoryFilter
                 onSetFilterBy={onSetFilterBy}
             />
-        </>
+            <div>hi</div>
+        </aside>
     )
 }
