@@ -1,11 +1,13 @@
 import { useSelector } from "react-redux"
 import { CategoryFilter } from "./CategoryFilter"
-import { setFilterBy } from "../../store/rest.actions"
+import { setFilterBy, setSortBy } from "../../store/rest.actions"
 import { PreferencesFilter } from "./PreferencesFilter"
 import { useEffect, useState } from "react"
+import { SortFilter } from "./SortFilter"
 
 export function SideFilter() {
     const filterBy = useSelector(storeState => storeState.restModule.filterBy)
+    const sortBy = useSelector(storeState => storeState.restModule.sortBy)
     const [clearFilterBtn, setClearFilterBtn] = useState(false)
 
     useEffect(() => {
@@ -14,7 +16,10 @@ export function SideFilter() {
 
     function onSetFilterBy(filterBy) {
         setFilterBy(filterBy)
+    }
 
+    function onSetSortBy(sortBy) {
+        setSortBy(sortBy)
     }
     function clearSideFilter(cl) {
         setClearFilterBtn(!cl)
@@ -28,7 +33,7 @@ export function SideFilter() {
             </div>
             <CategoryFilter onSetFilterBy={onSetFilterBy} clearFilterBtn={clearFilterBtn} clearSideFilter={clearSideFilter} />
             <PreferencesFilter onSetFilterBy={onSetFilterBy} />
-
+            <SortFilter onSetSortBy={onSetSortBy} sortBy={sortBy} />
         </aside>
     )
 }

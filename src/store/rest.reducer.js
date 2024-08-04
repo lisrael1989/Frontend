@@ -11,11 +11,15 @@ export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 // filter
 export const SET_FILTER_BY = 'SET_FILTER_BY';
 
+// sort
+export const SET_SORT_BY = 'SET_SORT_BY';
+
 // const searchParams = new URLSearchParams(window.location.search)
 const initialState = {
   rests: [],
   cart: [],
   filterBy: restService.getDefaultFilter(),
+  sortBy: restService.getSortBy()
 };
 
 export function restReducer(state = initialState, action = {}) {
@@ -37,6 +41,9 @@ export function restReducer(state = initialState, action = {}) {
 
     case SET_FILTER_BY:
       return { ...state, filterBy: action.filterBy };
+
+    case SET_SORT_BY:
+      return { ...state, sortBy: action.sortBy };
 
     default:
       return state;

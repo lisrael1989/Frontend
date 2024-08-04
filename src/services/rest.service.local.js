@@ -29,19 +29,18 @@ function getLabels() {
   return labels;
 }
 
-async function query(filterBy) {
+async function query(filterBy, sortBy) {
   var rests = await storageService.query(STORAGE_KEY);
+
+
   if (filterBy.category) {
-    const regex = new RegExp(filterBy.category, 'i')
-    rests = rests.filter(rest => regex.test(rest.category))
+    const regex = new RegExp(filterBy.category, 'i');
+    rests = rests.filter(rest => regex.test(rest.category));
   }
+
   if (filterBy.loc) {
     const regex = new RegExp(filterBy.loc, 'i');
-    rests = rests.filter((rest) => {
-      // Check restaurant location
-      if (regex.test(rest.address.city)) return true;
-    });
-    return rests;
+    rests = rests.filter(rest => regex.test(rest.address.city));
   }
 
   if (filterBy.txt) {
@@ -61,6 +60,10 @@ async function query(filterBy) {
       }
       return false;
     })
+  }
+
+  if (sortBy.sortBy) {
+    rests = _getSortBySwitch(rests, sortBy)
   }
   return rests;
 }
@@ -92,5 +95,25 @@ function getDefaultFilter() {
 }
 
 function getSortBy() {
-  sortBy = ""
+  return { sortBy: "" }
+}
+
+function _getSortBySwitch(rests, sortBy) {
+  console.log(rests, sortBy)
+  switch (sortBy.sortBy) {
+    case 'discounts':
+      return rests.sort((a, b) => (a.discount || 0) - (b.discount || 0));
+    case 'distance':
+      return rests.sort((a, b) => (a.distance || 0) - (b.distance || 0));
+    case 'rating':
+      return rests.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    case 'min':
+      return rests.sort((a, b) => (a.shipping.minOrder || 0) - (b.shipping.minOrder || 0));
+    case 'deliveryFee':
+      return rests.sort((a, b) => (parseFloat(a.shipping.shippingCost) || 0) - (parseFloat(b.shipping.shippingCost) || 0));
+    case 'deliveryTime':
+      return rests.sort((a, b) => (a.deliveryTime || 0) - (b.deliveryTime || 0));
+    default:
+      return rests;
+  }
 }

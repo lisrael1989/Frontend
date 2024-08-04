@@ -7,9 +7,10 @@ import { SideFilter } from '../cmps/filters-cmps/SideFilter.jsx';
 export function EatIndex() {
     const rests = useSelector(storeState => storeState.restModule.rests)
     const filterBy = useSelector(storeState => storeState.restModule.filterBy)
+    const sortBy = useSelector(storeState => storeState.restModule.sortBy)
     useEffect(() => {
-        loadRests(filterBy)
-    }, [filterBy])
+        loadRests(filterBy, sortBy)
+    }, [filterBy, sortBy])
 
     if (!rests) return <div className="loader"></div>
     return (

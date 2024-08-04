@@ -2,17 +2,17 @@ import { restService } from '../services/rest.service.local.js'
 // import { userService } from '../services/user.service.js'
 import { store } from './store.js'
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
-import { ADD_TO_CART, CLEAR_CART, REMOVE_FROM_CART, SET_RESTS, SET_FILTER_BY } from './rest.reducer.js'
+import { ADD_TO_CART, CLEAR_CART, REMOVE_FROM_CART, SET_RESTS, SET_FILTER_BY, SET_SORT_BY } from './rest.reducer.js'
 
 import { LOADING_DONE, LOADING_START } from './loading.reducer.js'
 
 
 
-export async function loadRests(filterBy) {
+export async function loadRests(filterBy, sortBy) {
 
     store.dispatch({ type: 'LOADING_START', isLoading: true })
     try {
-        const rests = await restService.query(filterBy)
+        const rests = await restService.query(filterBy, sortBy)
         store.dispatch({ type: SET_RESTS, rests })
     } catch (err) {
         console.error('Cannot load rests', err)
@@ -22,6 +22,10 @@ export async function loadRests(filterBy) {
     }
 }
 
+export function setSortBy(sortBy) {
+
+    store.dispatch({ type: SET_SORT_BY, sortBy })
+}
 export function setFilterBy(filterBy) {
     store.dispatch({ type: SET_FILTER_BY, filterBy })
 }
