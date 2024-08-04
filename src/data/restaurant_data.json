@@ -1,516 +1,512 @@
 {
-    "restaurants": [
+  "restaurants": [
+    {
+      "id": "33517412813",
+      "category": ["Hamburgers", "BBQ"],
+      "name": "American Graffiti",
+      "address": {
+        "street": "abrbanel 16",
+        "city": "Tel aviv"
+      },
+      "uploadDate": "2024-07-24",
+      "image": "https://images.unsplash.com/photo-1512152272829-e3139592d56f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4.5,
+      "kosher": true,
+      "shipping": {
+        "freeShipping": false,
+        "shippingCost": "2.5",
+        "minOrder": 12
+      },
+      "menu": {
+        "Menu Combo": [
+          {
+            "name": "Hamburger Menu",
+            "price": 8.0
+          },
+          {
+            "name": "Cheeseburger Menu",
+            "price": 9.5
+          },
+          {
+            "name": "Bacon Cheeseburger Menu",
+            "price": 10.5
+          },
+          {
+            "name": "Doppio Cheeseburger Menu",
+            "price": 12.5
+          },
+          {
+            "name": "Doppio Bacon Cheeseburger Menu",
+            "price": 13.5
+          },
+          {
+            "name": "Smoke Burger Menu",
+            "price": 14.5
+          }
+        ],
+        "Hot Dog": [
+          {
+            "name": "Hot Dog Plain",
+            "price": 8.0
+          },
+          {
+            "name": "Chorizo Hot Dog",
+            "price": 9.0
+          },
+          {
+            "name": "Hot Dog Messicano",
+            "price": 11.5
+          },
+          {
+            "name": "Super Hot Dog",
+            "price": 12.0
+          }
+        ],
+        "Fritti": [
+          {
+            "name": "Patatine Dipper",
+            "price": 6.5
+          },
+          {
+            "name": "Patatine Fritte Speziate",
+            "price": 6.0
+          },
+          {
+            "name": "Patatine a Fette con Buccia",
+            "price": 6.5
+          },
+          {
+            "name": "Patatine con Bacon, Barbecue e Uovo",
+            "price": 9.0
+          },
+          {
+            "name": "Wrustel Chips",
+            "price": 9.5
+          },
+          {
+            "name": "Anelli di Peperoni Pastellati",
+            "price": 7.5
+          }
+        ],
+        "Bevande e Alcolici": [
+          {
+            "name": "Bibita in Lattina",
+            "price": 2.5
+          },
+          {
+            "name": "Bibita 1,5L",
+            "price": 4.0
+          },
+          {
+            "name": "Birra 33cl",
+            "price": 4.0
+          },
+          {
+            "name": "Bibita 66cl",
+            "price": 5.0
+          }
+        ],
+        "Dolci": [
+          {
+            "name": "Churros Dulce De Leche",
+            "price": 8.5
+          },
+          {
+            "name": "Churros Cioccolato Bianco",
+            "price": 8.5
+          },
+          {
+            "name": "Churros Nutella",
+            "price": 8.5
+          },
+          {
+            "name": "Tiramisu alla Nutella",
+            "price": 8.5
+          },
+          {
+            "name": "Tiramisu Classico",
+            "price": 7.0
+          }
+        ]
+      },
+      "reviews": [
         {
-            "id": "33517412813",
-            "category": [
-                "Hamburgers",
-                "BBQ"
-            ],
-            "name": "American Graffiti",
-            "address": {
-                "street": "abrbanel 16",
-                "city": "Tel aviv"
-            },
-            "image": "https://images.unsplash.com/photo-1512152272829-e3139592d56f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rating": 4.5,
-            "shipping": {
-                "freeShipping": false,
-                "shippingCost": "2.5",
-                "minOrder": 12
-            },
-            "menu": {
-                "Menu Combo": [
-                    {
-                        "name": "Hamburger Menu",
-                        "price": 8.0
-                    },
-                    {
-                        "name": "Cheeseburger Menu",
-                        "price": 9.5
-                    },
-                    {
-                        "name": "Bacon Cheeseburger Menu",
-                        "price": 10.5
-                    },
-                    {
-                        "name": "Doppio Cheeseburger Menu",
-                        "price": 12.5
-                    },
-                    {
-                        "name": "Doppio Bacon Cheeseburger Menu",
-                        "price": 13.5
-                    },
-                    {
-                        "name": "Smoke Burger Menu",
-                        "price": 14.5
-                    }
-                ],
-                "Hot Dog": [
-                    {
-                        "name": "Hot Dog Plain",
-                        "price": 8.0
-                    },
-                    {
-                        "name": "Chorizo Hot Dog",
-                        "price": 9.0
-                    },
-                    {
-                        "name": "Hot Dog Messicano",
-                        "price": 11.5
-                    },
-                    {
-                        "name": "Super Hot Dog",
-                        "price": 12.0
-                    }
-                ],
-                "Fritti": [
-                    {
-                        "name": "Patatine Dipper",
-                        "price": 6.5
-                    },
-                    {
-                        "name": "Patatine Fritte Speziate",
-                        "price": 6.0
-                    },
-                    {
-                        "name": "Patatine a Fette con Buccia",
-                        "price": 6.5
-                    },
-                    {
-                        "name": "Patatine con Bacon, Barbecue e Uovo",
-                        "price": 9.0
-                    },
-                    {
-                        "name": "Wrustel Chips",
-                        "price": 9.5
-                    },
-                    {
-                        "name": "Anelli di Peperoni Pastellati",
-                        "price": 7.5
-                    }
-                ],
-                "Bevande e Alcolici": [
-                    {
-                        "name": "Bibita in Lattina",
-                        "price": 2.5
-                    },
-                    {
-                        "name": "Bibita 1,5L",
-                        "price": 4.0
-                    },
-                    {
-                        "name": "Birra 33cl",
-                        "price": 4.0
-                    },
-                    {
-                        "name": "Bibita 66cl",
-                        "price": 5.0
-                    }
-                ],
-                "Dolci": [
-                    {
-                        "name": "Churros Dulce De Leche",
-                        "price": 8.5
-                    },
-                    {
-                        "name": "Churros Cioccolato Bianco",
-                        "price": 8.5
-                    },
-                    {
-                        "name": "Churros Nutella",
-                        "price": 8.5
-                    },
-                    {
-                        "name": "Tiramisu alla Nutella",
-                        "price": 8.5
-                    },
-                    {
-                        "name": "Tiramisu Classico",
-                        "price": 7.0
-                    }
-                ]
-            },
-            "reviews": [
-                {
-                    "id": 201,
-                    "userId": 301,
-                    "rating": 5,
-                    "content": "Great burger, excellent service!",
-                    "date": "2024-07-01"
-                },
-                {
-                    "id": 204,
-                    "userId": 304,
-                    "rating": 5,
-                    "content": "Best burger in town, I'll come back again!",
-                    "date": "2024-07-04"
-                }
-            ],
-            "orders": [
-                {
-                    "id": 401,
-                    "userId": 301,
-                    "dishes": [
-                        {
-                            "name": "Hamburger Menu",
-                            "price": 8.0
-                        },
-                        {
-                            "name": "Patatine Dipper",
-                            "price": 6.5
-                        }
-                    ],
-                    "totalPrice": 14.5,
-                    "orderDate": "2024-07-05 18:30",
-                    "status": "Completed"
-                },
-                {
-                    "id": 404,
-                    "userId": 304,
-                    "dishes": [
-                        {
-                            "name": "Cheeseburger Menu",
-                            "price": 9.5
-                        }
-                    ],
-                    "totalPrice": 9.5,
-                    "orderDate": "2024-07-05 20:00",
-                    "status": "Pending"
-                }
-            ]
+          "id": 201,
+          "userId": 301,
+          "rating": 5,
+          "content": "Great burger, excellent service!",
+          "date": "2024-07-01"
         },
         {
-            "id": "44123812345",
-            "category": [
-                "Italian",
-                "Pizza",
-                "Pasta"
-            ],
-            "name": "La Bella Italia",
-            "address": {
-                "street": "Rotshilden 22",
-                "city": "Tel aviv"
-            },
-            "image": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rating": 4.8,
-            "shipping": {
-                "freeShipping": true,
-                "shippingCost": "0",
-                "minOrder": 15
-            },
-            "menu": {
-                "Pizza": [
-                    {
-                        "name": "Margherita",
-                        "price": 8.0
-                    },
-                    {
-                        "name": "Quattro Stagioni",
-                        "price": 10.0
-                    },
-                    {
-                        "name": "Diavola",
-                        "price": 9.5
-                    },
-                    {
-                        "name": "Capricciosa",
-                        "price": 11.0
-                    },
-                    {
-                        "name": "Quattro Formaggi",
-                        "price": 12.0
-                    },
-                    {
-                        "name": "Vegetariana",
-                        "price": 9.0
-                    }
-                ],
-                "Pasta": [
-                    {
-                        "name": "Spaghetti Carbonara",
-                        "price": 12.5
-                    },
-                    {
-                        "name": "Penne Arrabbiata",
-                        "price": 11.0
-                    },
-                    {
-                        "name": "Lasagna al Forno",
-                        "price": 13.5
-                    },
-                    {
-                        "name": "Ravioli Ricotta e Spinaci",
-                        "price": 14.0
-                    },
-                    {
-                        "name": "Tagliatelle al Ragù",
-                        "price": 13.0
-                    }
-                ],
-                "Desserts": [
-                    {
-                        "name": "Tiramisu",
-                        "price": 6.0
-                    },
-                    {
-                        "name": "Panna Cotta",
-                        "price": 5.5
-                    },
-                    {
-                        "name": "Cannoli Siciliani",
-                        "price": 7.0
-                    }
-                ],
-                "Beverages": [
-                    {
-                        "name": "Espresso",
-                        "price": 2.0
-                    },
-                    {
-                        "name": "Cappuccino",
-                        "price": 3.0
-                    },
-                    {
-                        "name": "Red Wine (Glass)",
-                        "price": 4.5
-                    },
-                    {
-                        "name": "White Wine (Glass)",
-                        "price": 4.5
-                    }
-                ]
-            },
-            "reviews": [
-                {
-                    "id": 301,
-                    "userId": 401,
-                    "rating": 5,
-                    "content": "Authentic Italian flavors, loved the Carbonara!",
-                    "date": "2024-07-10"
-                },
-                {
-                    "id": 302,
-                    "userId": 402,
-                    "rating": 4.5,
-                    "content": "Great pizza and friendly service. Will visit again!",
-                    "date": "2024-07-12"
-                }
-            ],
-            "orders": [
-                {
-                    "id": 501,
-                    "userId": 401,
-                    "dishes": [
-                        {
-                            "name": "Margherita",
-                            "price": 8.0
-                        },
-                        {
-                            "name": "Spaghetti Carbonara",
-                            "price": 12.5
-                        }
-                    ],
-                    "totalPrice": 20.5,
-                    "orderDate": "2024-07-15 19:30",
-                    "status": "Completed"
-                },
-                {
-                    "id": 502,
-                    "userId": 402,
-                    "dishes": [
-                        {
-                            "name": "Quattro Formaggi",
-                            "price": 12.0
-                        },
-                        {
-                            "name": "Tiramisu",
-                            "price": 6.0
-                        }
-                    ],
-                    "totalPrice": 18.0,
-                    "orderDate": "2024-07-16 18:45",
-                    "status": "Pending"
-                }
-            ]
-        },
-        {
-            "id": "33517412811",
-            "category": [
-                "Salads",
-                "Vegan"
-            ],
-            "name": "Nina",
-            "address": {
-                "street": "abrbanel 22",
-                "city": "Tel aviv"
-            },
-            "image": "https://plus.unsplash.com/premium_photo-1690561082029-0eb2ed65a09f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "rating": 4.7,
-            "shipping": {
-                "freeShipping": false,
-                "shippingCost": "50",
-                "minOrder": 75
-            },
-            "menu": {
-                "Menu Combo": [
-                    {
-                        "name": "Hamburger Menu",
-                        "price": 8.0
-                    },
-                    {
-                        "name": "Cheeseburger Menu",
-                        "price": 9.5
-                    },
-                    {
-                        "name": "Bacon Cheeseburger Menu",
-                        "price": 10.5
-                    },
-                    {
-                        "name": "Doppio Cheeseburger Menu",
-                        "price": 12.5
-                    },
-                    {
-                        "name": "Doppio Bacon Cheeseburger Menu",
-                        "price": 13.5
-                    },
-                    {
-                        "name": "Smoke Burger Menu",
-                        "price": 14.5
-                    }
-                ],
-                "Hot Dog": [
-                    {
-                        "name": "Hot Dog Plain",
-                        "price": 8.0
-                    },
-                    {
-                        "name": "Chorizo Hot Dog",
-                        "price": 9.0
-                    },
-                    {
-                        "name": "Hot Dog Messicano",
-                        "price": 11.5
-                    },
-                    {
-                        "name": "Super Hot Dog",
-                        "price": 12.0
-                    }
-                ],
-                "Fritti": [
-                    {
-                        "name": "Patatine Dipper",
-                        "price": 6.5
-                    },
-                    {
-                        "name": "Patatine Fritte Speziate",
-                        "price": 6.0
-                    },
-                    {
-                        "name": "Patatine a Fette con Buccia",
-                        "price": 6.5
-                    },
-                    {
-                        "name": "Patatine con Bacon, Barbecue e Uovo",
-                        "price": 9.0
-                    },
-                    {
-                        "name": "Wrustel Chips",
-                        "price": 9.5
-                    },
-                    {
-                        "name": "Anelli di Peperoni Pastellati",
-                        "price": 7.5
-                    }
-                ],
-                "Bevande e Alcolici": [
-                    {
-                        "name": "Bibita in Lattina",
-                        "price": 2.5
-                    },
-                    {
-                        "name": "Bibita 1,5L",
-                        "price": 4.0
-                    },
-                    {
-                        "name": "Birra 33cl",
-                        "price": 4.0
-                    },
-                    {
-                        "name": "Bibita 66cl",
-                        "price": 5.0
-                    }
-                ],
-                "Dolci": [
-                    {
-                        "name": "Churros Dulce De Leche",
-                        "price": 8.5
-                    },
-                    {
-                        "name": "Churros Cioccolato Bianco",
-                        "price": 8.5
-                    },
-                    {
-                        "name": "Churros Nutella",
-                        "price": 8.5
-                    },
-                    {
-                        "name": "Tiramisu alla Nutella",
-                        "price": 8.5
-                    },
-                    {
-                        "name": "Tiramisu Classico",
-                        "price": 7.0
-                    }
-                ]
-            },
-            "reviews": [
-                {
-                    "id": 201,
-                    "userId": 301,
-                    "rating": 5,
-                    "content": "Great burger, excellent service!",
-                    "date": "2024-07-01"
-                },
-                {
-                    "id": 204,
-                    "userId": 304,
-                    "rating": 5,
-                    "content": "Best burger in town, I'll come back again!",
-                    "date": "2024-07-04"
-                }
-            ],
-            "orders": [
-                {
-                    "id": 401,
-                    "userId": 301,
-                    "dishes": [
-                        {
-                            "name": "Hamburger Menu",
-                            "price": 8.0
-                        },
-                        {
-                            "name": "Patatine Dipper",
-                            "price": 6.5
-                        }
-                    ],
-                    "totalPrice": 14.5,
-                    "orderDate": "2024-07-05 18:30",
-                    "status": "Completed"
-                },
-                {
-                    "id": 404,
-                    "userId": 304,
-                    "dishes": [
-                        {
-                            "name": "Cheeseburger Menu",
-                            "price": 9.5
-                        }
-                    ],
-                    "totalPrice": 9.5,
-                    "orderDate": "2024-07-05 20:00",
-                    "status": "Pending"
-                }
-            ]
+          "id": 204,
+          "userId": 304,
+          "rating": 5,
+          "content": "Best burger in town, I'll come back again!",
+          "date": "2024-07-04"
         }
-    ]
+      ],
+      "orders": [
+        {
+          "id": 401,
+          "userId": 301,
+          "dishes": [
+            {
+              "name": "Hamburger Menu",
+              "price": 8.0
+            },
+            {
+              "name": "Patatine Dipper",
+              "price": 6.5
+            }
+          ],
+          "totalPrice": 14.5,
+          "orderDate": "2024-07-05 18:30",
+          "status": "Completed"
+        },
+        {
+          "id": 404,
+          "userId": 304,
+          "dishes": [
+            {
+              "name": "Cheeseburger Menu",
+              "price": 9.5
+            }
+          ],
+          "totalPrice": 9.5,
+          "orderDate": "2024-07-05 20:00",
+          "status": "Pending"
+        }
+      ]
+    },
+    {
+      "id": "44123812345",
+      "category": ["Italian", "Pizza", "Pasta"],
+      "name": "La Bella Italia",
+      "address": {
+        "street": "Rotshilden 22",
+        "city": "Tel aviv"
+      },
+      "uploadDate": "2024-08-2",
+      "image": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4.8,
+      "kosher": true,
+      "shipping": {
+        "freeShipping": true,
+        "shippingCost": "0",
+        "minOrder": 15
+      },
+      "menu": {
+        "Pizza": [
+          {
+            "name": "Margherita",
+            "price": 8.0
+          },
+          {
+            "name": "Quattro Stagioni",
+            "price": 10.0
+          },
+          {
+            "name": "Diavola",
+            "price": 9.5
+          },
+          {
+            "name": "Capricciosa",
+            "price": 11.0
+          },
+          {
+            "name": "Quattro Formaggi",
+            "price": 12.0
+          },
+          {
+            "name": "Vegetariana",
+            "price": 9.0
+          }
+        ],
+        "Pasta": [
+          {
+            "name": "Spaghetti Carbonara",
+            "price": 12.5
+          },
+          {
+            "name": "Penne Arrabbiata",
+            "price": 11.0
+          },
+          {
+            "name": "Lasagna al Forno",
+            "price": 13.5
+          },
+          {
+            "name": "Ravioli Ricotta e Spinaci",
+            "price": 14.0
+          },
+          {
+            "name": "Tagliatelle al Ragù",
+            "price": 13.0
+          }
+        ],
+        "Desserts": [
+          {
+            "name": "Tiramisu",
+            "price": 6.0
+          },
+          {
+            "name": "Panna Cotta",
+            "price": 5.5
+          },
+          {
+            "name": "Cannoli Siciliani",
+            "price": 7.0
+          }
+        ],
+        "Beverages": [
+          {
+            "name": "Espresso",
+            "price": 2.0
+          },
+          {
+            "name": "Cappuccino",
+            "price": 3.0
+          },
+          {
+            "name": "Red Wine (Glass)",
+            "price": 4.5
+          },
+          {
+            "name": "White Wine (Glass)",
+            "price": 4.5
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 301,
+          "userId": 401,
+          "rating": 5,
+          "content": "Authentic Italian flavors, loved the Carbonara!",
+          "date": "2024-07-10"
+        },
+        {
+          "id": 302,
+          "userId": 402,
+          "rating": 4.5,
+          "content": "Great pizza and friendly service. Will visit again!",
+          "date": "2024-07-12"
+        }
+      ],
+      "orders": [
+        {
+          "id": 501,
+          "userId": 401,
+          "dishes": [
+            {
+              "name": "Margherita",
+              "price": 8.0
+            },
+            {
+              "name": "Spaghetti Carbonara",
+              "price": 12.5
+            }
+          ],
+          "totalPrice": 20.5,
+          "orderDate": "2024-07-15 19:30",
+          "status": "Completed"
+        },
+        {
+          "id": 502,
+          "userId": 402,
+          "dishes": [
+            {
+              "name": "Quattro Formaggi",
+              "price": 12.0
+            },
+            {
+              "name": "Tiramisu",
+              "price": 6.0
+            }
+          ],
+          "totalPrice": 18.0,
+          "orderDate": "2024-07-16 18:45",
+          "status": "Pending"
+        }
+      ]
+    },
+    {
+      "id": "33517412817",
+      "category": ["Salads", "Vegan"],
+      "name": "Nina",
+      "address": {
+        "street": "abrbanel 22",
+        "city": "Tel aviv"
+      },
+      "uploadDate": "2024-07-15",
+      "image": "https://plus.unsplash.com/premium_photo-1690561082029-0eb2ed65a09f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "rating": 4.7,
+      "kosher": false,
+      "shipping": {
+        "freeShipping": false,
+        "shippingCost": "50",
+        "minOrder": 75
+      },
+      "menu": {
+        "Menu Combo": [
+          {
+            "name": "Hamburger Menu",
+            "price": 8.0
+          },
+          {
+            "name": "Cheeseburger Menu",
+            "price": 9.5
+          },
+          {
+            "name": "Bacon Cheeseburger Menu",
+            "price": 10.5
+          },
+          {
+            "name": "Doppio Cheeseburger Menu",
+            "price": 12.5
+          },
+          {
+            "name": "Doppio Bacon Cheeseburger Menu",
+            "price": 13.5
+          },
+          {
+            "name": "Smoke Burger Menu",
+            "price": 14.5
+          }
+        ],
+        "Hot Dog": [
+          {
+            "name": "Hot Dog Plain",
+            "price": 8.0
+          },
+          {
+            "name": "Chorizo Hot Dog",
+            "price": 9.0
+          },
+          {
+            "name": "Hot Dog Messicano",
+            "price": 11.5
+          },
+          {
+            "name": "Super Hot Dog",
+            "price": 12.0
+          }
+        ],
+        "Fritti": [
+          {
+            "name": "Patatine Dipper",
+            "price": 6.5
+          },
+          {
+            "name": "Patatine Fritte Speziate",
+            "price": 6.0
+          },
+          {
+            "name": "Patatine a Fette con Buccia",
+            "price": 6.5
+          },
+          {
+            "name": "Patatine con Bacon, Barbecue e Uovo",
+            "price": 9.0
+          },
+          {
+            "name": "Wrustel Chips",
+            "price": 9.5
+          },
+          {
+            "name": "Anelli di Peperoni Pastellati",
+            "price": 7.5
+          }
+        ],
+        "Bevande e Alcolici": [
+          {
+            "name": "Bibita in Lattina",
+            "price": 2.5
+          },
+          {
+            "name": "Bibita 1,5L",
+            "price": 4.0
+          },
+          {
+            "name": "Birra 33cl",
+            "price": 4.0
+          },
+          {
+            "name": "Bibita 66cl",
+            "price": 5.0
+          }
+        ],
+        "Dolci": [
+          {
+            "name": "Churros Dulce De Leche",
+            "price": 8.5
+          },
+          {
+            "name": "Churros Cioccolato Bianco",
+            "price": 8.5
+          },
+          {
+            "name": "Churros Nutella",
+            "price": 8.5
+          },
+          {
+            "name": "Tiramisu alla Nutella",
+            "price": 8.5
+          },
+          {
+            "name": "Tiramisu Classico",
+            "price": 7.0
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 201,
+          "userId": 301,
+          "rating": 5,
+          "content": "Great burger, excellent service!",
+          "date": "2024-07-01"
+        },
+        {
+          "id": 204,
+          "userId": 304,
+          "rating": 5,
+          "content": "Best burger in town, I'll come back again!",
+          "date": "2024-07-04"
+        }
+      ],
+      "orders": [
+        {
+          "id": 401,
+          "userId": 301,
+          "dishes": [
+            {
+              "name": "Hamburger Menu",
+              "price": 8.0
+            },
+            {
+              "name": "Patatine Dipper",
+              "price": 6.5
+            }
+          ],
+          "totalPrice": 14.5,
+          "orderDate": "2024-07-05 18:30",
+          "status": "Completed"
+        },
+        {
+          "id": 404,
+          "userId": 304,
+          "dishes": [
+            {
+              "name": "Cheeseburger Menu",
+              "price": 9.5
+            }
+          ],
+          "totalPrice": 9.5,
+          "orderDate": "2024-07-05 20:00",
+          "status": "Pending"
+        }
+      ]
+    }
+  ]
 }

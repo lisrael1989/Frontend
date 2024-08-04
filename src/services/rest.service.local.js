@@ -10,7 +10,7 @@ export const restService = {
   getById,
   getLabels,
   getDefaultFilter,
-  getSortBy
+  getSortBy,
 };
 window.cs = restService;
 
@@ -31,9 +31,13 @@ function getLabels() {
 
 async function query(filterBy) {
   var rests = await storageService.query(STORAGE_KEY);
+  if (filterBy.Preferences) {
+    rests = rests.filter((rest) => rest.kosher === true);
+  }
+
   if (filterBy.category) {
-    const regex = new RegExp(filterBy.category, 'i')
-    rests = rests.filter(rest => regex.test(rest.category))
+    const regex = new RegExp(filterBy.category, 'i');
+    rests = rests.filter((rest) => regex.test(rest.category));
   }
   if (filterBy.loc) {
     const regex = new RegExp(filterBy.loc, 'i');
@@ -60,7 +64,7 @@ async function query(filterBy) {
         }
       }
       return false;
-    })
+    });
   }
   return rests;
 }
@@ -86,11 +90,10 @@ function getDefaultFilter() {
     txt: '',
     loc: '' || 'Tel aviv',
     category: '',
-    Preferences: "",
-
-  }
+    Preferences: '',
+  };
 }
 
 function getSortBy() {
-  sortBy = ""
+  sortBy = '';
 }

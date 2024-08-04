@@ -1,13 +1,53 @@
-export function PreferencesFilter({ onSetFilterBy }) {
+import { useEffect, useState } from 'react';
+import { utilService } from '../../services/util.service';
 
-    function handlePreferencesChange({ target }) {
-        onSetFilterBy(true)
+export function PreferencesFilter({ onSetFilterBy, clearFilterBtn }) {
+  const [selectedPreference, setSelectedPreference] = useState(null);
+
+  useEffect(() => {
+    if (clearFilterBtn) {
+      setSelectedPreference(null);
+      onSetFilterBy({});
     }
+  }, [clearFilterBtn]);
 
-    return (
-        <section className="preferences-filter-container">
-            <button onClick={() => handlePreferencesChange()}>Free delivery</button>
+  function handlePreferencesChange(preference) {
+    console.log('preference', preference);
+    if (selectedPreference === preference) {
+      setSelectedPreference(null);
+      onSetFilterBy({ [preference]: false });
+    } else {
+      setSelectedPreference(preference);
+      onSetFilterBy({ [preference]: true });
+    }
+  }
 
-        </section>
-    )
+  return (
+    <section className="preferences-filter-container flex">
+      <button
+        className={`preferences-btns ${
+          selectedPreference === 'freeShipping' ? 'selected' : ''
+        }`}
+        onClick={() => handlePreferencesChange('freeShipping')}
+      >
+        Free delivery
+      </button>
+      <button
+        className={`preferences-btns ${
+          selectedPreference === 'new' ? 'selected' : ''
+        }`}
+        onClick={() => handlePreferencesChange('new')}
+      >
+        New
+      </button>
+      <button
+        className={`preferences-btns ${
+          selectedPreference === 'kosher' ? 'selected' : ''
+        }`}
+        onClick={() => handlePreferencesChange('kosher')}
+      >
+        Kosher
+      </button>
+    </section>
+  );
 }

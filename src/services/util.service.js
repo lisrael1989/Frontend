@@ -15,7 +15,32 @@ export const utilService = {
   formatRestDateRange,
   haversineDistance,
   formatIsoDateToYMDDashboard,
+  newRest,
+  getNewRest,
 };
+
+function newRest(uploadDate) {
+  const now = new Date();
+  const uploadDateObj = new Date(uploadDate);
+  const diffInTime = now.getTime() - uploadDateObj.getTime();
+  const diffInDays = diffInTime / (1000 * 3600 * 24);
+  return diffInDays <= 14;
+}
+
+function getNewRest(restaurants) {
+  if (!restaurants) {
+    throw new Error('Restaurants array is null or undefined');
+  }
+  return restaurants.map((rest) => {
+    if (!rest || !rest.uploadDate) {
+      throw new Error('Restaurant object or uploadDate is null or undefined');
+    }
+    return {
+      ...rest,
+      isNew: newRest(rest.uploadDate),
+    };
+  });
+}
 
 function makeId(length = 6) {
   var txt = '';
@@ -88,13 +113,13 @@ function randomPastTime() {
 }
 
 function debounce(func, timeout = 300) {
-  let timer
+  let timer;
   return (...args) => {
-    clearTimeout(timer)
+    clearTimeout(timer);
     timer = setTimeout(() => {
-      func.apply(this, args)
-    }, timeout)
-  }
+      func.apply(this, args);
+    }, timeout);
+  };
 }
 
 function saveToStorage(key, value) {
