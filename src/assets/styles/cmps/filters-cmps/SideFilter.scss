@@ -26,6 +26,13 @@
             border: none;
             height: 42px;
             font-size: em(14px);
+            color: lightblue;
+            cursor: not-allowed;
+
+            &.on {
+                color: blue;
+                cursor: pointer;
+            }
         }
     }
 }

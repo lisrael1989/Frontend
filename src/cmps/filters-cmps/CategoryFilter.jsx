@@ -1,44 +1,17 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { categoryPath } from "../../services/category.path.images"
 
-export function CategoryFilter({ onSetFilterBy }) {
+export function CategoryFilter({ onSetFilterBy, clearFilterBtn }) {
     const [selectedCategory, setSelectedCategory] = useState(null)
     const [showAllCategory, setShowAllCategory] = useState(false)
-    const categories = [
-        { name: 'Asian', url: 'public/img/category-images/asianFusion.png' },
-        { name: 'BBQ', url: 'public/img/category-images/meatGrill.png' },
-        { name: 'Pizza', url: 'public/img/category-images/pizza.png' },
-        { name: 'Burgers', url: 'public/img/category-images/burgers.png' },
-        { name: 'Sushi', url: 'public/img/category-images/japaneseSushi.png' },
-        { name: 'Salads', url: 'public/img/category-images/salads.png' },
-        { name: 'Coffee House', url: 'public/img/category-images/coffeeHouse.png' },
-        { name: 'Home Made', url: 'public/img/category-images/homeMade.png' },
-        { name: 'Pasta', url: 'public/img/category-images/pasta.png' },
-        { name: 'Fish', url: 'public/img/category-images/fish.png' },
-        { name: 'Humus', url: 'public/img/category-images/humus.png' },
-        { name: 'Gelato', url: 'public/img/category-images/gelato.png' },
-        { name: 'Wraps', url: 'public/img/category-images/sandwichesWraps.png' },
-        { name: 'Store', url: 'public/img/category-images/convenienceStore.png' },
-        { name: 'Patisserie', url: 'public/img/category-images/patisserie.png' },
-        { name: 'Juice', url: 'public/img/category-images/SmoothiesAndShakes.png' },
-        { name: 'Mexican', url: 'public/img/category-images/mexican.png' },
-        { name: 'Indian', url: 'public/img/category-images/indian.png' },
-        { name: 'Falafel', url: 'public/img/category-images/falafel.png' },
-        { name: 'Seafood', url: 'public/img/category-images/seafood.png' },
-        { name: 'Poke', url: 'public/img/category-images/poke.png' },
-        { name: 'Soup', url: 'public/img/category-images/soup.png' },
-        { name: 'Pastries', url: 'public/img/category-images/bakery.png' },
-        { name: 'Bar', url: 'public/img/category-images/bar.png' },
-        { name: 'Home cooks', url: 'public/img/category-images/homecooked.png' },
-        { name: 'Fresh fish', url: 'public/img/category-images/freshfish.png' },
-        { name: 'Liquid store', url: 'public/img/category-images/alcoholic.png' },
-        { name: 'Cheese shop', url: 'public/img/category-images/cheeseshop.png' },
-        { name: 'Fruits & Veg', url: 'public/img/category-images/fruitsAndVeg.png' },
-        { name: 'Fruit trays', url: 'public/img/category-images/fruitplatters.png' },
-        { name: 'Delicatessen', url: 'public/img/category-images/delicatessen.png' },
-        { name: 'Sweets', url: 'public/img/category-images/sweetsAndTreats.png' },
-        { name: 'Butcher', url: 'public/img/category-images/butcher.png' },
-    ]
+    const categories = categoryPath
 
+    useEffect(() => {
+        if (clearFilterBtn) {
+            setSelectedCategory(null)
+            onSetFilterBy({ category: '' })
+        }
+    }, [clearFilterBtn])
 
     function handleCategoryClick(cat) {
         if (selectedCategory === cat) {
@@ -50,7 +23,6 @@ export function CategoryFilter({ onSetFilterBy }) {
         }
     }
     const initialCategory = 9
-
 
     function handleToggleShowAll() {
         setShowAllCategory(!showAllCategory)
@@ -64,8 +36,7 @@ export function CategoryFilter({ onSetFilterBy }) {
                     {categories.map((cat, index) => (
                         <li key={cat.name}
                             onClick={() => handleCategoryClick(cat.name)}
-                            className={`${selectedCategory && selectedCategory !== cat.name ? 'faded' : ''} ${selectedCategory === cat.name ? 'selected' : ''} ${index >= initialCategory && !showAllCategory ? 'hidden' : ''}`}
-                        >
+                            className={`${selectedCategory && selectedCategory !== cat.name ? 'faded' : ''} ${selectedCategory === cat.name ? 'selected' : ''} ${index >= initialCategory && !showAllCategory ? 'hidden' : ''}`}>
                             <div className="cat-img-container">
                                 <img src={cat.url} alt={cat.name} />
                             </div>
@@ -73,7 +44,6 @@ export function CategoryFilter({ onSetFilterBy }) {
                         </li>
                     ))}
                 </ul>
-
             </section>
 
             <button className="show-more-btn" onClick={handleToggleShowAll}>
