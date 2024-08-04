@@ -31,18 +31,29 @@ function getLabels() {
 
 async function query(filterBy, sortBy) {
   var rests = await storageService.query(STORAGE_KEY);
-  if (filterBy.Preferences) {
+
+  if (filterBy.kosher) {
     rests = rests.filter((rest) => rest.kosher === true);
+  }
+
+  if (filterBy.new) {
+    const twoWeeksAgo = new Date();
+    twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
+    rests = rests.filter((rest) => new Date(rest.uploadDate) >= twoWeeksAgo);
+  }
+
+  if (filterBy.freeShipping) {
+    rests = rests.filter((rest) => rest.shipping.freeShipping === true);
   }
 
   if (filterBy.category) {
     const regex = new RegExp(filterBy.category, 'i');
-    rests = rests.filter(rest => regex.test(rest.category));
+    rests = rests.filter((rest) => regex.test(rest.category));
   }
 
   if (filterBy.loc) {
     const regex = new RegExp(filterBy.loc, 'i');
-    rests = rests.filter(rest => regex.test(rest.address.city));
+    rests = rests.filter((rest) => regex.test(rest.address.city));
   }
 
   if (filterBy.txt) {
@@ -61,11 +72,15 @@ async function query(filterBy, sortBy) {
         }
       }
       return false;
-    })
+    });
   }
 
   if (sortBy.sortBy) {
-    rests = _getSortBySwitch(rests, sortBy)
+    rests = _getSortBySwitch(rests, sortBy);
+  }
+
+  if (sortBy.sortBy) {
+    rests = _getSortBySwitch(rests, sortBy);
   }
   return rests;
 }
@@ -91,15 +106,19 @@ function getDefaultFilter() {
     txt: '',
     loc: '' || 'Tel aviv',
     category: '',
-    Preferences: '',
+    kosher: false,
+    freeShipping: false,
+    new: false,
+    // Preferences: '',
   };
 }
 
 function getSortBy() {
-  return { sortBy: "" }
+  return { sortBy: '' };
 }
 
 function _getSortBySwitch(rests, sortBy) {
+  console.log(rests, sortBy);
   switch (sortBy.sortBy) {
     case 'discounts':
       return rests.sort((a, b) => (a.discount || 0) - (b.discount || 0));
@@ -108,11 +127,19 @@ function _getSortBySwitch(rests, sortBy) {
     case 'rating':
       return rests.sort((a, b) => (b.rating || 0) - (a.rating || 0));
     case 'min':
-      return rests.sort((a, b) => (a.shipping.minOrder || 0) - (b.shipping.minOrder || 0));
+      return rests.sort(
+        (a, b) => (a.shipping.minOrder || 0) - (b.shipping.minOrder || 0)
+      );
     case 'deliveryFee':
-      return rests.sort((a, b) => (parseFloat(a.shipping.shippingCost) || 0) - (parseFloat(b.shipping.shippingCost) || 0));
+      return rests.sort(
+        (a, b) =>
+          (parseFloat(a.shipping.shippingCost) || 0) -
+          (parseFloat(b.shipping.shippingCost) || 0)
+      );
     case 'deliveryTime':
-      return rests.sort((a, b) => (a.deliveryTime || 0) - (b.deliveryTime || 0));
+      return rests.sort(
+        (a, b) => (a.deliveryTime || 0) - (b.deliveryTime || 0)
+      );
     default:
       return rests;
   }
