@@ -11,8 +11,8 @@ export function SideFilter() {
     const [clearFilterBtn, setClearFilterBtn] = useState(false)
 
     useEffect(() => {
-        setClearFilterBtn(false)
-    }, [clearFilterBtn])
+        setClearFilterBtn(false);
+    }, [clearFilterBtn]);
 
     function onSetFilterBy(filterBy) {
         setFilterBy(filterBy)
@@ -29,11 +29,24 @@ export function SideFilter() {
         <aside className="side-filter-container">
             <div className="filter-header">
                 <p className="filter-title">Filter</p>
-                <button className={!filterBy.category ? 'clear-filter-btn' : 'clear-filter-btn on'} onClick={() => clearSideFilter(clearFilterBtn)}>Clear</button>
+                <button
+                    className={
+                        !filterBy.category ? 'clear-filter-btn' : 'clear-filter-btn on'
+                    }
+                    onClick={() => clearSideFilter(clearFilterBtn)}
+                >
+                    Clear
+                </button>
             </div>
-            <CategoryFilter onSetFilterBy={onSetFilterBy} clearFilterBtn={clearFilterBtn} clearSideFilter={clearSideFilter} />
-            <PreferencesFilter onSetFilterBy={onSetFilterBy} />
-            <SortFilter onSetSortBy={onSetSortBy} sortBy={sortBy} />
-        </aside>
-    )
+            <CategoryFilter
+                onSetFilterBy={onSetFilterBy}
+                clearFilterBtn={clearFilterBtn}
+                clearSideFilter={clearSideFilter}
+            />
+            <PreferencesFilter
+                onSetFilterBy={onSetFilterBy}
+                clearFilterBtn={clearFilterBtn}
+            />
+            <SortFilter onSetSortBy={onSetSortBy} sortBy={sortBy} />    </aside>
+    );
 }

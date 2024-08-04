@@ -1,0 +1,22 @@
+.preferences-filter-container {
+  & .preferences-btns {
+    margin: 0px 0px 8px 4px;
+    height: 32px;
+    padding: 6px 12px;
+    border-radius: 16px;
+    border: 1px solid #e0ddd9;
+    color: rgb(10, 56, 71);
+    font-size: 14px;
+    background-color: rgb(248, 245, 242);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: normal;
+    width: fit-content;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover-btn-gray;
+    }
+  }
+}
