@@ -21,6 +21,7 @@ export function LocationFilter() {
   }
   return (
     <input
+      className="location-filter main-filter"
       type="text"
       value={localFilterBy.loc || ''}
       onChange={handleChange}

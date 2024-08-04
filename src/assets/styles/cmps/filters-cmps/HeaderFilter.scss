@@ -1,0 +1,12 @@
+.main-filter {
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  border: 1px solid rgb(215, 215, 215);
+  transition: border 0.05s linear;
+  height: 32px;
+  width: 305px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 14px;
+}

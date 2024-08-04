@@ -4,10 +4,7 @@ import { TextFilter } from './TextFilter';
 
 export function HeaderFilter() {
   return (
-    <section
-      className="header-filter"
-      style={{ display: 'flex', justifyContent: 'space-between' }}
-    >
+    <section className="header-filter" style={{ display: 'flex', gap: '20px' }}>
       <LocationFilter />
       <TextFilter />
     </section>
