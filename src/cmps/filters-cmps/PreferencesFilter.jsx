@@ -2,52 +2,61 @@ import { useEffect, useState } from 'react';
 import { utilService } from '../../services/util.service';
 
 export function PreferencesFilter({ onSetFilterBy, clearFilterBtn }) {
-  const [selectedPreference, setSelectedPreference] = useState(null);
+  const [selectedPreferences, setSelectedPreferences] = useState({
+    freeShipping: false,
+    new: false,
+    kosher: false,
+  });
 
   useEffect(() => {
     if (clearFilterBtn) {
-      setSelectedPreference(null);
+      setSelectedPreferences({
+        freeShipping: false,
+        new: false,
+        kosher: false,
+      });
       onSetFilterBy({});
     }
-  }, [clearFilterBtn]);
+  }, [clearFilterBtn, onSetFilterBy]);
 
   function handlePreferencesChange(preference) {
-    console.log('preference', preference);
-    if (selectedPreference === preference) {
-      setSelectedPreference(null);
-      onSetFilterBy({ [preference]: false });
-    } else {
-      setSelectedPreference(preference);
-      onSetFilterBy({ [preference]: true });
-    }
+    const updatedPreferences = {
+      ...selectedPreferences,
+      [preference]: !selectedPreferences[preference],
+    };
+    setSelectedPreferences(updatedPreferences);
+    onSetFilterBy(updatedPreferences);
   }
 
   return (
-    <section className="preferences-filter-container flex">
-      <button
-        className={`preferences-btns ${
-          selectedPreference === 'freeShipping' ? 'selected' : ''
-        }`}
-        onClick={() => handlePreferencesChange('freeShipping')}
-      >
-        Free delivery
-      </button>
-      <button
-        className={`preferences-btns ${
-          selectedPreference === 'new' ? 'selected' : ''
-        }`}
-        onClick={() => handlePreferencesChange('new')}
-      >
-        New
-      </button>
-      <button
-        className={`preferences-btns ${
-          selectedPreference === 'kosher' ? 'selected' : ''
-        }`}
-        onClick={() => handlePreferencesChange('kosher')}
-      >
-        Kosher
-      </button>
-    </section>
+    <>
+      <h1>Preferences</h1>
+      <section className="preferences-filter-container flex">
+        <button
+          className={`preferences-btns ${
+            selectedPreferences.freeShipping ? 'selected' : ''
+          }`}
+          onClick={() => handlePreferencesChange('freeShipping')}
+        >
+          Free delivery
+        </button>
+        <button
+          className={`preferences-btns ${
+            selectedPreferences.new ? 'selected' : ''
+          }`}
+          onClick={() => handlePreferencesChange('new')}
+        >
+          New
+        </button>
+        <button
+          className={`preferences-btns ${
+            selectedPreferences.kosher ? 'selected' : ''
+          }`}
+          onClick={() => handlePreferencesChange('kosher')}
+        >
+          Kosher
+        </button>
+      </section>
+    </>
   );
 }
