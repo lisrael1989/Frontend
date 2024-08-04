@@ -25,16 +25,19 @@ export function SideFilter() {
         setClearFilterBtn(!cl)
     }
 
+    function haveFilterOrSort() {
+        if (filterBy.category || filterBy.Preferences || sortBy.sortBy) {
+            return 'clear-filter-btn on'
+        }
+        return 'clear-filter-btn'
+    }
     return (
         <aside className="side-filter-container">
             <div className="filter-header">
                 <p className="filter-title">Filter</p>
                 <button
-                    className={
-                        !filterBy.category ? 'clear-filter-btn' : 'clear-filter-btn on'
-                    }
-                    onClick={() => clearSideFilter(clearFilterBtn)}
-                >
+                    className={haveFilterOrSort()}
+                    onClick={() => clearSideFilter(clearFilterBtn)}>
                     Clear
                 </button>
             </div>
@@ -47,6 +50,7 @@ export function SideFilter() {
                 onSetFilterBy={onSetFilterBy}
                 clearFilterBtn={clearFilterBtn}
             />
-            <SortFilter onSetSortBy={onSetSortBy} sortBy={sortBy} />    </aside>
+            <SortFilter onSetSortBy={onSetSortBy} clearFilterBtn={clearFilterBtn} />
+        </aside>
     );
 }

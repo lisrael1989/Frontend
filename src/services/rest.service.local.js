@@ -67,10 +67,6 @@ async function query(filterBy, sortBy) {
   if (sortBy.sortBy) {
     rests = _getSortBySwitch(rests, sortBy)
   }
-
-  if (sortBy.sortBy) {
-    rests = _getSortBySwitch(rests, sortBy)
-  }
   return rests;
 }
 
@@ -104,7 +100,6 @@ function getSortBy() {
 }
 
 function _getSortBySwitch(rests, sortBy) {
-  console.log(rests, sortBy)
   switch (sortBy.sortBy) {
     case 'discounts':
       return rests.sort((a, b) => (a.discount || 0) - (b.discount || 0));
