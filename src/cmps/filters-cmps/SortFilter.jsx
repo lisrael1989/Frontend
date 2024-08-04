@@ -1,11 +1,14 @@
+import { useEffect } from "react"
 
-export function SortFilter({ onSetSortBy }) {
-
+export function SortFilter({ onSetSortBy, clearFilterBtn }) {
+    useEffect(() => {
+        if (clearFilterBtn) {
+            onSetSortBy({ sortBy: "" })
+        }
+    }, [clearFilterBtn])
     function setSortClick(sortBy) {
-
         onSetSortBy({ sortBy: sortBy })
     }
-
 
     return (
         <section className="sort-filter-container">
