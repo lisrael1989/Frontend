@@ -21,7 +21,7 @@ export function TextFilter() {
   }
 
   return (
-    <div className='"search-input-wrapper"'>
+    <div className="search-input-wrapper">
       <i className="fa-solid fa-magnifying-glass search-icon"></i>
       <input
         className="text-filter main-filter "

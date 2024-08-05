@@ -30,10 +30,16 @@ export function PreferencesFilter({ onSetFilterBy, clearFilterBtn }) {
 
   return (
     <>
-      <h1>Preferences</h1>
-      <section className="preferences-filter-container flex">
+      <section className="preferences-filter-container flex" style={{ flexWrap: 'wrap' }}>
         <button className={`preferences-btns ${selectedPreferences.freeShipping ? 'selected' : ''}`} onClick={() => handlePreferencesChange('freeShipping')}>Free delivery</button>
         <button className={`preferences-btns ${selectedPreferences.new ? 'selected' : ''}`} onClick={() => handlePreferencesChange('new')}>New</button>
+        <button className={`preferences-btns ${selectedPreferences.kosher ? 'selected' : ''}`} onClick={() => handlePreferencesChange('kosher')}>Kosher</button>
+        <button className={`preferences-btns ${selectedPreferences.freeShipping ? 'selected' : ''}`} onClick={() => handlePreferencesChange('freeShipping')}>Free delivery</button>
+        <button className={`preferences-btns ${selectedPreferences.new ? 'selected' : ''}`} onClick={() => handlePreferencesChange('new')}>New</button>
+        <button className={`preferences-btns ${selectedPreferences.kosher ? 'selected' : ''}`} onClick={() => handlePreferencesChange('kosher')}>Kosher</button>
+        <button className={`preferences-btns ${selectedPreferences.freeShipping ? 'selected' : ''}`} onClick={() => handlePreferencesChange('freeShipping')}>Free delivery</button>
+        <button className={`preferences-btns ${selectedPreferences.new ? 'selected' : ''}`} onClick={() => handlePreferencesChange('new')}>New</button>
+        <button className={`preferences-btns ${selectedPreferences.kosher ? 'selected' : ''}`} onClick={() => handlePreferencesChange('kosher')}>Kosher</button>
         <button className={`preferences-btns ${selectedPreferences.kosher ? 'selected' : ''}`} onClick={() => handlePreferencesChange('kosher')}>Kosher</button>
       </section>
     </>

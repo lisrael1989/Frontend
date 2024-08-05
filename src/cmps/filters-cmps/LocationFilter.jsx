@@ -22,7 +22,7 @@ export function LocationFilter() {
   return (
     <div className="search-input-wrapper">
       <div className="search-icon-place flex">
-        <i class="fa-solid fa-location-dot search-icon-place"></i>
+        <i className="fa-solid fa-location-dot search-icon-place"></i>
         <p className="delivery-to-title">Delivery to:</p>
       </div>
       <input

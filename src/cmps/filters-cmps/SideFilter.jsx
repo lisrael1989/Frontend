@@ -51,10 +51,13 @@ export function SideFilter() {
                 clearFilterBtn={clearFilterBtn}
                 clearSideFilter={clearSideFilter}
             />
-            <PreferencesFilter
-                onSetFilterBy={onSetFilterBy}
-                clearFilterBtn={clearFilterBtn}
-            />
+            <div className="preferences-filter-container">
+                <p>Preferences</p>
+                <PreferencesFilter
+                    onSetFilterBy={onSetFilterBy}
+                    clearFilterBtn={clearFilterBtn}
+                />
+            </div>
             <div className="sort-container">
                 <div className="sort-header">
                     <p>Sort list by</p>
