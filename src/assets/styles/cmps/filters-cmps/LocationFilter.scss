@@ -1,2 +1,27 @@
-.location-filter {
+.search-input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.search-icon-place {
+  position: absolute;
+  top: 47%;
+  left: 3%;
+  transform: translateY(-50%);
+  color: $text-gray;
+  pointer-events: none;
+  font-size: 14px;
+}
+
+.location-filter.main-filter {
+  padding-left: 110px;
+  padding-top: 2px;
+}
+
+.delivery-to-title {
+  padding-left: 20px;
+  padding-top: 5px;
+  font-size: 14px;
+  font-weight: 800;
+  color: black;
 }

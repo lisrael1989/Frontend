@@ -20,13 +20,19 @@ export function LocationFilter() {
     debouncedSetFilterBy(updatedFilterBy);
   }
   return (
-    <input
-      className="location-filter main-filter"
-      type="text"
-      value={localFilterBy.loc || ''}
-      onChange={handleChange}
-      name="loc"
-      placeholder="Put Your Address here"
-    />
+    <div className="search-input-wrapper">
+      <div className="search-icon-place flex">
+        <i class="fa-solid fa-location-dot search-icon-place"></i>
+        <p className="delivery-to-title">Delivery to:</p>
+      </div>
+      <input
+        className="location-filter main-filter"
+        type="text"
+        value={localFilterBy.loc || ''}
+        onChange={handleChange}
+        name="loc"
+        placeholder="Put Your Address here"
+      />
+    </div>
   );
 }
