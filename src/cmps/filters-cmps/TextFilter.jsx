@@ -21,13 +21,16 @@ export function TextFilter() {
   }
 
   return (
-    <input
-      className="text-filter main-filter"
-      type="text"
-      value={localFilterBy.txt || ''}
-      onChange={handleChange}
-      name="txt"
-      placeholder="Dishes, restaurants or"
-    />
+    <div className='"search-input-wrapper"'>
+      <i className="fa-solid fa-magnifying-glass search-icon"></i>
+      <input
+        className="text-filter main-filter "
+        type="text"
+        value={localFilterBy.txt || ''}
+        onChange={handleChange}
+        name="txt"
+        placeholder="Dishes, restaurants or cuisines "
+      />
+    </div>
   );
 }

@@ -1,2 +1,18 @@
-.text-filter {
+.search-input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.search-icon {
+  position: absolute;
+  top: 28%;
+  left: 40%;
+  transform: translateY(-50%);
+  color: $text-gray;
+  pointer-events: none;
+  font-size: 14px;
+}
+
+.text-filter.main-filter {
+  padding-left: 35px;
+  padding-top: 2px;
 }
