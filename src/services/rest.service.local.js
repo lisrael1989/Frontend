@@ -118,7 +118,7 @@ function getSortBy() {
 }
 
 function _getSortBySwitch(rests, sortBy) {
-  console.log(rests, sortBy);
+
   switch (sortBy.sortBy) {
     case 'discounts':
       return rests.sort((a, b) => (a.discount || 0) - (b.discount || 0));

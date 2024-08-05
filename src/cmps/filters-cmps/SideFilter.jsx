@@ -26,7 +26,7 @@ export function SideFilter() {
     }
 
     function haveFilterOrSort() {
-        if (filterBy.category || filterBy.Preferences || sortBy.sortBy) {
+        if (filterBy.category || filterBy.freeShipping || filterBy.kosher || filterBy.new || sortBy.sortBy) {
             return 'clear-filter-btn on'
         }
         return 'clear-filter-btn'
