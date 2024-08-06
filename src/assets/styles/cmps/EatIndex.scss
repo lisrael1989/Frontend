@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 303px 1fr;
   grid-template-rows: 1fr 1fr;
+  margin-top: 30px;
 
   & .right-container {
     grid-column: 2;

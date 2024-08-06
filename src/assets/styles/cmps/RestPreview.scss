@@ -6,8 +6,13 @@
   height: 280px;
   background-color: white;
 
+  & .rest-img {
+    width: 100%;
+    height: 150px;
+  }
+
   & .rest-info {
-    padding: 5px;
+    padding: 15px 15px 0px;
 
     & .rest-name {
       margin: 0;
@@ -25,11 +30,6 @@
       padding-bottom: 5px;
     }
 
-    & .rest-img {
-      width: 100%;
-      background-color: gray;
-    }
-
     & .rest-info-bottom {
       font-size: em(14px);
       gap: 5px;
@@ -38,7 +38,7 @@
       .rest-delivery,
       .rest-delivery-cost,
       .min-delivery-price {
-        font-size: em(14px);
+        font-size: em(16px);
         background-color: $light-gray;
         padding: 3px;
         color: $text-gray;
