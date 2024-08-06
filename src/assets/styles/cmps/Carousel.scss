@@ -3,7 +3,7 @@
   align-items: center;
   position: relative;
   padding-left: 22px;
-  //   width: 100%;
+
 
   .carousel {
     overflow: hidden;
@@ -30,6 +30,7 @@
 
     .card {
       flex-shrink: 0;
+      max-width: 950px;
     }
 
     .card-body {
@@ -40,7 +41,15 @@
       padding-right: 20px;
       justify-content: center;
       margin: auto 0;
-      width: 75%;
+
+      & .card-title {
+        font-size: 32px;
+        font-weight: bold;
+      }
+
+      & .card-description {
+        font-size: 16px;
+      }
     }
   }
 
@@ -52,17 +61,17 @@
     font-size: 1.5rem;
     padding: 0.5rem;
     position: absolute;
-    top: 80%;
-    transform: translateY(-50%);
+    top: 75%;
+
 
     &.prev {
-      left: 1140px;
+      left: 90%;
       z-index: 1;
       font-size: 30px;
     }
 
     &.next {
-      right: 15px;
+      right: 2%;
       font-size: 30px;
     }
   }

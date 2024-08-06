@@ -66,8 +66,8 @@ export function Carousel() {
               />
               <Stack>
                 <CardBody className="card-body">
-                  <Heading size="bd">{card.title}</Heading>
-                  <Text py="5">{card.description}</Text>
+                  <Heading size="bd" className='card-title'>{card.title}</Heading>
+                  <Text py="5" className='card-description'>{card.description}</Text>
                 </CardBody>
                 <CardFooter></CardFooter>
               </Stack>
