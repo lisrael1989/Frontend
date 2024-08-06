@@ -1,7 +1,7 @@
 .side-filter-container {
     display: flex;
     flex-direction: column;
-    min-height: 549px;
+    min-height: fit-content;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(215, 215, 215);
     border-radius: 2px;

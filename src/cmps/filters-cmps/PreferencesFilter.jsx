@@ -34,13 +34,6 @@ export function PreferencesFilter({ onSetFilterBy, clearFilterBtn }) {
         <button className={`preferences-btns ${selectedPreferences.freeShipping ? 'selected' : ''}`} onClick={() => handlePreferencesChange('freeShipping')}>Free delivery</button>
         <button className={`preferences-btns ${selectedPreferences.new ? 'selected' : ''}`} onClick={() => handlePreferencesChange('new')}>New</button>
         <button className={`preferences-btns ${selectedPreferences.kosher ? 'selected' : ''}`} onClick={() => handlePreferencesChange('kosher')}>Kosher</button>
-        <button className={`preferences-btns ${selectedPreferences.freeShipping ? 'selected' : ''}`} onClick={() => handlePreferencesChange('freeShipping')}>Free delivery</button>
-        <button className={`preferences-btns ${selectedPreferences.new ? 'selected' : ''}`} onClick={() => handlePreferencesChange('new')}>New</button>
-        <button className={`preferences-btns ${selectedPreferences.kosher ? 'selected' : ''}`} onClick={() => handlePreferencesChange('kosher')}>Kosher</button>
-        <button className={`preferences-btns ${selectedPreferences.freeShipping ? 'selected' : ''}`} onClick={() => handlePreferencesChange('freeShipping')}>Free delivery</button>
-        <button className={`preferences-btns ${selectedPreferences.new ? 'selected' : ''}`} onClick={() => handlePreferencesChange('new')}>New</button>
-        <button className={`preferences-btns ${selectedPreferences.kosher ? 'selected' : ''}`} onClick={() => handlePreferencesChange('kosher')}>Kosher</button>
-        <button className={`preferences-btns ${selectedPreferences.kosher ? 'selected' : ''}`} onClick={() => handlePreferencesChange('kosher')}>Kosher</button>
       </section>
     </>
   );
