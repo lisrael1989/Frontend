@@ -104,7 +104,7 @@ async function createRests() {
 function getDefaultFilter() {
   return {
     txt: '',
-    loc: '' || 'Tel aviv',
+    loc: '' || '',
     category: '',
     kosher: false,
     freeShipping: false,

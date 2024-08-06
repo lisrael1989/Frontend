@@ -2,7 +2,10 @@
   "restaurants": [
     {
       "id": "33517412813",
-      "category": ["Hamburgers", "BBQ"],
+      "category": [
+        "Hamburgers",
+        "BBQ"
+      ],
       "name": "American Graffiti",
       "address": {
         "street": "abrbanel 16",
@@ -180,7 +183,11 @@
     },
     {
       "id": "44123812345",
-      "category": ["Italian", "Pizza", "Pasta"],
+      "category": [
+        "Italian",
+        "Pizza",
+        "Pasta"
+      ],
       "name": "La Bella Italia",
       "address": {
         "street": "Rotshilden 22",
@@ -332,7 +339,10 @@
     },
     {
       "id": "33517412817",
-      "category": ["Salads", "Vegan"],
+      "category": [
+        "Salads",
+        "Vegan"
+      ],
       "name": "Nina",
       "address": {
         "street": "abrbanel 22",
@@ -504,6 +514,1254 @@
           ],
           "totalPrice": 9.5,
           "orderDate": "2024-07-05 20:00",
+          "status": "Pending"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "category": [
+        "Seafood"
+      ],
+      "name": "Seafood Restaurant 1",
+      "address": {
+        "street": "Dizengoff",
+        "city": "Haifa"
+      },
+      "uploadDate": "2024-07-3",
+      "image": "https://example.com/seafood_1.jpg",
+      "rating": 4.0,
+      "kosher": true,
+      "shipping": {
+        "freeShipping": true,
+        "shippingCost": "8.34",
+        "minOrder": 85
+      },
+      "menu": {
+        "Seafood": [
+          {
+            "name": "Seafood Dish 1",
+            "price": 13.9
+          },
+          {
+            "name": "Seafood Dish 2",
+            "price": 6.86
+          },
+          {
+            "name": "Seafood Dish 3",
+            "price": 16.43
+          },
+          {
+            "name": "Seafood Dish 4",
+            "price": 14.83
+          },
+          {
+            "name": "Seafood Dish 5",
+            "price": 13.65
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 933,
+          "userId": 600,
+          "rating": 1,
+          "content": "Review content 1 for restaurant 1",
+          "date": "2024-07-14"
+        },
+        {
+          "id": 504,
+          "userId": 485,
+          "rating": 1,
+          "content": "Review content 2 for restaurant 1",
+          "date": "2024-07-8"
+        }
+      ],
+      "orders": [
+        {
+          "id": 666,
+          "userId": 565,
+          "dishes": [
+            {
+              "name": "Seafood Dish 1",
+              "price": 9.74
+            },
+            {
+              "name": "Seafood Dish 2",
+              "price": 15.34
+            }
+          ],
+          "totalPrice": 39.58,
+          "orderDate": "2024-07-31 23:32",
+          "status": "Completed"
+        },
+        {
+          "id": 74,
+          "userId": 940,
+          "dishes": [
+            {
+              "name": "Seafood Dish 1",
+              "price": 18.06
+            },
+            {
+              "name": "Seafood Dish 2",
+              "price": 15.14
+            }
+          ],
+          "totalPrice": 35.82,
+          "orderDate": "2024-07-4 21:58",
+          "status": "Pending"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "category": [
+        "Soup"
+      ],
+      "name": "Soup Restaurant 2",
+      "address": {
+        "street": "Dizengoff",
+        "city": "Holon"
+      },
+      "uploadDate": "2024-07-23",
+      "image": "https://example.com/soup_2.jpg",
+      "rating": 4.6,
+      "kosher": false,
+      "shipping": {
+        "freeShipping": false,
+        "shippingCost": "8.66",
+        "minOrder": 76
+      },
+      "menu": {
+        "Soup": [
+          {
+            "name": "Soup Dish 1",
+            "price": 9.14
+          },
+          {
+            "name": "Soup Dish 2",
+            "price": 13.06
+          },
+          {
+            "name": "Soup Dish 3",
+            "price": 17.33
+          },
+          {
+            "name": "Soup Dish 4",
+            "price": 11.21
+          },
+          {
+            "name": "Soup Dish 5",
+            "price": 9.43
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 398,
+          "userId": 638,
+          "rating": 5,
+          "content": "Review content 1 for restaurant 2",
+          "date": "2024-07-2"
+        },
+        {
+          "id": 22,
+          "userId": 550,
+          "rating": 1,
+          "content": "Review content 2 for restaurant 2",
+          "date": "2024-07-18"
+        }
+      ],
+      "orders": [
+        {
+          "id": 975,
+          "userId": 653,
+          "dishes": [
+            {
+              "name": "Soup Dish 1",
+              "price": 10.74
+            },
+            {
+              "name": "Soup Dish 2",
+              "price": 9.45
+            }
+          ],
+          "totalPrice": 16.39,
+          "orderDate": "2024-07-4 19:29",
+          "status": "Completed"
+        },
+        {
+          "id": 722,
+          "userId": 542,
+          "dishes": [
+            {
+              "name": "Soup Dish 1",
+              "price": 16.34
+            },
+            {
+              "name": "Soup Dish 2",
+              "price": 6.94
+            }
+          ],
+          "totalPrice": 37.6,
+          "orderDate": "2024-07-26 10:47",
+          "status": "Pending"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "category": [
+        "Gelato"
+      ],
+      "name": "Gelato Restaurant 3",
+      "address": {
+        "street": "Ayalon",
+        "city": "Bnei Brak"
+      },
+      "uploadDate": "2024-07-16",
+      "image": "https://example.com/gelato_3.jpg",
+      "rating": 4.5,
+      "kosher": false,
+      "shipping": {
+        "freeShipping": true,
+        "shippingCost": "0.2",
+        "minOrder": 18
+      },
+      "menu": {
+        "Gelato": [
+          {
+            "name": "Gelato Dish 1",
+            "price": 16.4
+          },
+          {
+            "name": "Gelato Dish 2",
+            "price": 5.04
+          },
+          {
+            "name": "Gelato Dish 3",
+            "price": 7.12
+          },
+          {
+            "name": "Gelato Dish 4",
+            "price": 17.53
+          },
+          {
+            "name": "Gelato Dish 5",
+            "price": 16.08
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 204,
+          "userId": 192,
+          "rating": 2,
+          "content": "Review content 1 for restaurant 3",
+          "date": "2024-07-27"
+        },
+        {
+          "id": 491,
+          "userId": 498,
+          "rating": 1,
+          "content": "Review content 2 for restaurant 3",
+          "date": "2024-07-3"
+        }
+      ],
+      "orders": [
+        {
+          "id": 377,
+          "userId": 842,
+          "dishes": [
+            {
+              "name": "Gelato Dish 1",
+              "price": 8.51
+            },
+            {
+              "name": "Gelato Dish 2",
+              "price": 7.32
+            }
+          ],
+          "totalPrice": 31.66,
+          "orderDate": "2024-07-23 16:55",
+          "status": "Completed"
+        },
+        {
+          "id": 844,
+          "userId": 486,
+          "dishes": [
+            {
+              "name": "Gelato Dish 1",
+              "price": 7.41
+            },
+            {
+              "name": "Gelato Dish 2",
+              "price": 16.93
+            }
+          ],
+          "totalPrice": 19.58,
+          "orderDate": "2024-07-6 19:18",
+          "status": "Pending"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "category": [
+        "Sweets"
+      ],
+      "name": "Sweets Restaurant 4",
+      "address": {
+        "street": "Begin",
+        "city": "Holon"
+      },
+      "uploadDate": "2024-07-4",
+      "image": "https://example.com/sweets_4.jpg",
+      "rating": 3.1,
+      "kosher": false,
+      "shipping": {
+        "freeShipping": true,
+        "shippingCost": "0.91",
+        "minOrder": 28
+      },
+      "menu": {
+        "Sweets": [
+          {
+            "name": "Sweets Dish 1",
+            "price": 13.35
+          },
+          {
+            "name": "Sweets Dish 2",
+            "price": 16.34
+          },
+          {
+            "name": "Sweets Dish 3",
+            "price": 9.07
+          },
+          {
+            "name": "Sweets Dish 4",
+            "price": 12.28
+          },
+          {
+            "name": "Sweets Dish 5",
+            "price": 13.17
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 315,
+          "userId": 992,
+          "rating": 1,
+          "content": "Review content 1 for restaurant 4",
+          "date": "2024-07-17"
+        },
+        {
+          "id": 764,
+          "userId": 932,
+          "rating": 5,
+          "content": "Review content 2 for restaurant 4",
+          "date": "2024-07-25"
+        }
+      ],
+      "orders": [
+        {
+          "id": 523,
+          "userId": 570,
+          "dishes": [
+            {
+              "name": "Sweets Dish 1",
+              "price": 7.23
+            },
+            {
+              "name": "Sweets Dish 2",
+              "price": 7.82
+            }
+          ],
+          "totalPrice": 11.53,
+          "orderDate": "2024-07-30 11:21",
+          "status": "Pending"
+        },
+        {
+          "id": 347,
+          "userId": 26,
+          "dishes": [
+            {
+              "name": "Sweets Dish 1",
+              "price": 13.96
+            },
+            {
+              "name": "Sweets Dish 2",
+              "price": 12.04
+            }
+          ],
+          "totalPrice": 37.1,
+          "orderDate": "2024-07-28 19:44",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "category": [
+        "Butcher"
+      ],
+      "name": "Butcher Restaurant 5",
+      "address": {
+        "street": "Sokolov",
+        "city": "Holon"
+      },
+      "uploadDate": "2024-07-4",
+      "image": "https://example.com/butcher_5.jpg",
+      "rating": 3.2,
+      "kosher": true,
+      "shipping": {
+        "freeShipping": false,
+        "shippingCost": "0.04",
+        "minOrder": 90
+      },
+      "menu": {
+        "Butcher": [
+          {
+            "name": "Butcher Dish 1",
+            "price": 14.26
+          },
+          {
+            "name": "Butcher Dish 2",
+            "price": 13.49
+          },
+          {
+            "name": "Butcher Dish 3",
+            "price": 12.11
+          },
+          {
+            "name": "Butcher Dish 4",
+            "price": 11.56
+          },
+          {
+            "name": "Butcher Dish 5",
+            "price": 11.78
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 549,
+          "userId": 585,
+          "rating": 2,
+          "content": "Review content 1 for restaurant 5",
+          "date": "2024-07-4"
+        },
+        {
+          "id": 570,
+          "userId": 882,
+          "rating": 1,
+          "content": "Review content 2 for restaurant 5",
+          "date": "2024-07-19"
+        }
+      ],
+      "orders": [
+        {
+          "id": 135,
+          "userId": 643,
+          "dishes": [
+            {
+              "name": "Butcher Dish 1",
+              "price": 7.25
+            },
+            {
+              "name": "Butcher Dish 2",
+              "price": 6.07
+            }
+          ],
+          "totalPrice": 26.68,
+          "orderDate": "2024-07-7 23:49",
+          "status": "Pending"
+        },
+        {
+          "id": 87,
+          "userId": 861,
+          "dishes": [
+            {
+              "name": "Butcher Dish 1",
+              "price": 8.07
+            },
+            {
+              "name": "Butcher Dish 2",
+              "price": 16.71
+            }
+          ],
+          "totalPrice": 23.78,
+          "orderDate": "2024-07-13 21:10",
+          "status": "Pending"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "category": [
+        "Sweets"
+      ],
+      "name": "Sweets Restaurant 6",
+      "address": {
+        "street": "Ayalon",
+        "city": "Ashdod"
+      },
+      "uploadDate": "2024-07-25",
+      "image": "https://example.com/sweets_6.jpg",
+      "rating": 4.4,
+      "kosher": true,
+      "shipping": {
+        "freeShipping": false,
+        "shippingCost": "3.92",
+        "minOrder": 51
+      },
+      "menu": {
+        "Sweets": [
+          {
+            "name": "Sweets Dish 1",
+            "price": 19.63
+          },
+          {
+            "name": "Sweets Dish 2",
+            "price": 8.65
+          },
+          {
+            "name": "Sweets Dish 3",
+            "price": 10.14
+          },
+          {
+            "name": "Sweets Dish 4",
+            "price": 17.39
+          },
+          {
+            "name": "Sweets Dish 5",
+            "price": 13.53
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 93,
+          "userId": 964,
+          "rating": 4,
+          "content": "Review content 1 for restaurant 6",
+          "date": "2024-07-27"
+        },
+        {
+          "id": 670,
+          "userId": 492,
+          "rating": 1,
+          "content": "Review content 2 for restaurant 6",
+          "date": "2024-07-12"
+        }
+      ],
+      "orders": [
+        {
+          "id": 20,
+          "userId": 233,
+          "dishes": [
+            {
+              "name": "Sweets Dish 1",
+              "price": 18.56
+            },
+            {
+              "name": "Sweets Dish 2",
+              "price": 15.78
+            }
+          ],
+          "totalPrice": 29.09,
+          "orderDate": "2024-07-23 12:27",
+          "status": "Pending"
+        },
+        {
+          "id": 321,
+          "userId": 362,
+          "dishes": [
+            {
+              "name": "Sweets Dish 1",
+              "price": 17.38
+            },
+            {
+              "name": "Sweets Dish 2",
+              "price": 12.96
+            }
+          ],
+          "totalPrice": 22.37,
+          "orderDate": "2024-07-31 17:28",
+          "status": "Pending"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "category": [
+        "Pastries"
+      ],
+      "name": "Pastries Restaurant 7",
+      "address": {
+        "street": "Arlozorov",
+        "city": "Netanya"
+      },
+      "uploadDate": "2024-07-5",
+      "image": "https://example.com/pastries_7.jpg",
+      "rating": 3.2,
+      "kosher": false,
+      "shipping": {
+        "freeShipping": true,
+        "shippingCost": "9.86",
+        "minOrder": 78
+      },
+      "menu": {
+        "Pastries": [
+          {
+            "name": "Pastries Dish 1",
+            "price": 12.55
+          },
+          {
+            "name": "Pastries Dish 2",
+            "price": 15.05
+          },
+          {
+            "name": "Pastries Dish 3",
+            "price": 18.47
+          },
+          {
+            "name": "Pastries Dish 4",
+            "price": 13.84
+          },
+          {
+            "name": "Pastries Dish 5",
+            "price": 9.39
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 925,
+          "userId": 217,
+          "rating": 4,
+          "content": "Review content 1 for restaurant 7",
+          "date": "2024-07-21"
+        },
+        {
+          "id": 376,
+          "userId": 340,
+          "rating": 1,
+          "content": "Review content 2 for restaurant 7",
+          "date": "2024-07-26"
+        }
+      ],
+      "orders": [
+        {
+          "id": 237,
+          "userId": 505,
+          "dishes": [
+            {
+              "name": "Pastries Dish 1",
+              "price": 16.37
+            },
+            {
+              "name": "Pastries Dish 2",
+              "price": 15.03
+            }
+          ],
+          "totalPrice": 37.92,
+          "orderDate": "2024-07-27 14:14",
+          "status": "Pending"
+        },
+        {
+          "id": 36,
+          "userId": 378,
+          "dishes": [
+            {
+              "name": "Pastries Dish 1",
+              "price": 19.46
+            },
+            {
+              "name": "Pastries Dish 2",
+              "price": 19.6
+            }
+          ],
+          "totalPrice": 30.64,
+          "orderDate": "2024-07-6 21:56",
+          "status": "Pending"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "category": [
+        "Juice"
+      ],
+      "name": "Juice Restaurant 8",
+      "address": {
+        "street": "Herzl",
+        "city": "Petah Tikva"
+      },
+      "uploadDate": "2024-07-22",
+      "image": "https://example.com/juice_8.jpg",
+      "rating": 3.9,
+      "kosher": false,
+      "shipping": {
+        "freeShipping": false,
+        "shippingCost": "9.59",
+        "minOrder": 93
+      },
+      "menu": {
+        "Juice": [
+          {
+            "name": "Juice Dish 1",
+            "price": 11.39
+          },
+          {
+            "name": "Juice Dish 2",
+            "price": 14.28
+          },
+          {
+            "name": "Juice Dish 3",
+            "price": 7.38
+          },
+          {
+            "name": "Juice Dish 4",
+            "price": 10.86
+          },
+          {
+            "name": "Juice Dish 5",
+            "price": 5.86
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 971,
+          "userId": 289,
+          "rating": 2,
+          "content": "Review content 1 for restaurant 8",
+          "date": "2024-07-14"
+        },
+        {
+          "id": 560,
+          "userId": 401,
+          "rating": 3,
+          "content": "Review content 2 for restaurant 8",
+          "date": "2024-07-6"
+        }
+      ],
+      "orders": [
+        {
+          "id": 951,
+          "userId": 105,
+          "dishes": [
+            {
+              "name": "Juice Dish 1",
+              "price": 13.25
+            },
+            {
+              "name": "Juice Dish 2",
+              "price": 14.28
+            }
+          ],
+          "totalPrice": 20.72,
+          "orderDate": "2024-07-4 17:49",
+          "status": "Pending"
+        },
+        {
+          "id": 728,
+          "userId": 671,
+          "dishes": [
+            {
+              "name": "Juice Dish 1",
+              "price": 8.99
+            },
+            {
+              "name": "Juice Dish 2",
+              "price": 16.01
+            }
+          ],
+          "totalPrice": 16.85,
+          "orderDate": "2024-07-21 11:43",
+          "status": "Pending"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "category": [
+        "BBQ"
+      ],
+      "name": "BBQ Restaurant 9",
+      "address": {
+        "street": "Jabotinsky",
+        "city": "Beersheba"
+      },
+      "uploadDate": "2024-07-20",
+      "image": "https://example.com/bbq_9.jpg",
+      "rating": 4.1,
+      "kosher": false,
+      "shipping": {
+        "freeShipping": true,
+        "shippingCost": "8.92",
+        "minOrder": 13
+      },
+      "menu": {
+        "BBQ": [
+          {
+            "name": "BBQ Dish 1",
+            "price": 13.17
+          },
+          {
+            "name": "BBQ Dish 2",
+            "price": 14.28
+          },
+          {
+            "name": "BBQ Dish 3",
+            "price": 5.45
+          },
+          {
+            "name": "BBQ Dish 4",
+            "price": 10.21
+          },
+          {
+            "name": "BBQ Dish 5",
+            "price": 16.23
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 252,
+          "userId": 644,
+          "rating": 3,
+          "content": "Review content 1 for restaurant 9",
+          "date": "2024-07-27"
+        },
+        {
+          "id": 327,
+          "userId": 37,
+          "rating": 5,
+          "content": "Review content 2 for restaurant 9",
+          "date": "2024-07-23"
+        }
+      ],
+      "orders": [
+        {
+          "id": 724,
+          "userId": 862,
+          "dishes": [
+            {
+              "name": "BBQ Dish 1",
+              "price": 6.61
+            },
+            {
+              "name": "BBQ Dish 2",
+              "price": 16.36
+            }
+          ],
+          "totalPrice": 37.39,
+          "orderDate": "2024-07-22 16:55",
+          "status": "Pending"
+        },
+        {
+          "id": 846,
+          "userId": 1,
+          "dishes": [
+            {
+              "name": "BBQ Dish 1",
+              "price": 9.6
+            },
+            {
+              "name": "BBQ Dish 2",
+              "price": 13.77
+            }
+          ],
+          "totalPrice": 15.07,
+          "orderDate": "2024-07-5 18:33",
+          "status": "Pending"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "category": [
+        "Cheese shop"
+      ],
+      "name": "Cheese shop Restaurant 10",
+      "address": {
+        "street": "Begin",
+        "city": "Ashdod"
+      },
+      "uploadDate": "2024-07-9",
+      "image": "https://example.com/cheese shop_10.jpg",
+      "rating": 3.0,
+      "kosher": false,
+      "shipping": {
+        "freeShipping": true,
+        "shippingCost": "3.77",
+        "minOrder": 93
+      },
+      "menu": {
+        "Cheese shop": [
+          {
+            "name": "Cheese shop Dish 1",
+            "price": 14.5
+          },
+          {
+            "name": "Cheese shop Dish 2",
+            "price": 14.54
+          },
+          {
+            "name": "Cheese shop Dish 3",
+            "price": 13.91
+          },
+          {
+            "name": "Cheese shop Dish 4",
+            "price": 13.89
+          },
+          {
+            "name": "Cheese shop Dish 5",
+            "price": 14.7
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 86,
+          "userId": 148,
+          "rating": 5,
+          "content": "Review content 1 for restaurant 10",
+          "date": "2024-07-15"
+        },
+        {
+          "id": 18,
+          "userId": 306,
+          "rating": 1,
+          "content": "Review content 2 for restaurant 10",
+          "date": "2024-07-27"
+        }
+      ],
+      "orders": [
+        {
+          "id": 414,
+          "userId": 764,
+          "dishes": [
+            {
+              "name": "Cheese shop Dish 1",
+              "price": 8.25
+            },
+            {
+              "name": "Cheese shop Dish 2",
+              "price": 16.88
+            }
+          ],
+          "totalPrice": 19.5,
+          "orderDate": "2024-07-17 15:17",
+          "status": "Completed"
+        },
+        {
+          "id": 758,
+          "userId": 306,
+          "dishes": [
+            {
+              "name": "Cheese shop Dish 1",
+              "price": 14.83
+            },
+            {
+              "name": "Cheese shop Dish 2",
+              "price": 15.26
+            }
+          ],
+          "totalPrice": 34.53,
+          "orderDate": "2024-07-17 21:42",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "category": [
+        "Sweets"
+      ],
+      "name": "Sweets Restaurant 11",
+      "address": {
+        "street": "Ayalon",
+        "city": "Jerusalem"
+      },
+      "uploadDate": "2024-07-16",
+      "image": "https://example.com/sweets_11.jpg",
+      "rating": 3.2,
+      "kosher": false,
+      "shipping": {
+        "freeShipping": false,
+        "shippingCost": "5.4",
+        "minOrder": 25
+      },
+      "menu": {
+        "Sweets": [
+          {
+            "name": "Sweets Dish 1",
+            "price": 14.87
+          },
+          {
+            "name": "Sweets Dish 2",
+            "price": 18.95
+          },
+          {
+            "name": "Sweets Dish 3",
+            "price": 11.51
+          },
+          {
+            "name": "Sweets Dish 4",
+            "price": 7.25
+          },
+          {
+            "name": "Sweets Dish 5",
+            "price": 14.04
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 517,
+          "userId": 657,
+          "rating": 5,
+          "content": "Review content 1 for restaurant 11",
+          "date": "2024-07-21"
+        },
+        {
+          "id": 186,
+          "userId": 317,
+          "rating": 3,
+          "content": "Review content 2 for restaurant 11",
+          "date": "2024-07-30"
+        }
+      ],
+      "orders": [
+        {
+          "id": 234,
+          "userId": 904,
+          "dishes": [
+            {
+              "name": "Sweets Dish 1",
+              "price": 11.12
+            },
+            {
+              "name": "Sweets Dish 2",
+              "price": 6.73
+            }
+          ],
+          "totalPrice": 11.48,
+          "orderDate": "2024-07-20 22:52",
+          "status": "Completed"
+        },
+        {
+          "id": 705,
+          "userId": 2,
+          "dishes": [
+            {
+              "name": "Sweets Dish 1",
+              "price": 6.86
+            },
+            {
+              "name": "Sweets Dish 2",
+              "price": 19.91
+            }
+          ],
+          "totalPrice": 11.21,
+          "orderDate": "2024-07-9 18:55",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "category": [
+        "Fruit trays"
+      ],
+      "name": "Fruit trays Restaurant 12",
+      "address": {
+        "street": "Dizengoff",
+        "city": "Haifa"
+      },
+      "uploadDate": "2024-07-18",
+      "image": "https://example.com/fruit trays_12.jpg",
+      "rating": 3.1,
+      "kosher": true,
+      "shipping": {
+        "freeShipping": false,
+        "shippingCost": "6.19",
+        "minOrder": 97
+      },
+      "menu": {
+        "Fruit trays": [
+          {
+            "name": "Fruit trays Dish 1",
+            "price": 15.03
+          },
+          {
+            "name": "Fruit trays Dish 2",
+            "price": 13.23
+          },
+          {
+            "name": "Fruit trays Dish 3",
+            "price": 19.74
+          },
+          {
+            "name": "Fruit trays Dish 4",
+            "price": 6.78
+          },
+          {
+            "name": "Fruit trays Dish 5",
+            "price": 12.87
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 264,
+          "userId": 155,
+          "rating": 1,
+          "content": "Review content 1 for restaurant 12",
+          "date": "2024-07-12"
+        },
+        {
+          "id": 106,
+          "userId": 156,
+          "rating": 1,
+          "content": "Review content 2 for restaurant 12",
+          "date": "2024-07-3"
+        }
+      ],
+      "orders": [
+        {
+          "id": 204,
+          "userId": 883,
+          "dishes": [
+            {
+              "name": "Fruit trays Dish 1",
+              "price": 10.34
+            },
+            {
+              "name": "Fruit trays Dish 2",
+              "price": 9.76
+            }
+          ],
+          "totalPrice": 16.32,
+          "orderDate": "2024-07-20 23:35",
+          "status": "Pending"
+        },
+        {
+          "id": 711,
+          "userId": 393,
+          "dishes": [
+            {
+              "name": "Fruit trays Dish 1",
+              "price": 5.87
+            },
+            {
+              "name": "Fruit trays Dish 2",
+              "price": 7.08
+            }
+          ],
+          "totalPrice": 20.11,
+          "orderDate": "2024-07-30 14:23",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "category": [
+        "Fruit trays"
+      ],
+      "name": "Fruit trays Restaurant 13",
+      "address": {
+        "street": "Rothschild",
+        "city": "Rishon LeZion"
+      },
+      "uploadDate": "2024-07-24",
+      "image": "https://example.com/fruit trays_13.jpg",
+      "rating": 3.1,
+      "kosher": false,
+      "shipping": {
+        "freeShipping": false,
+        "shippingCost": "7.64",
+        "minOrder": 70
+      },
+      "menu": {
+        "Fruit trays": [
+          {
+            "name": "Fruit trays Dish 1",
+            "price": 9.03
+          },
+          {
+            "name": "Fruit trays Dish 2",
+            "price": 13.72
+          },
+          {
+            "name": "Fruit trays Dish 3",
+            "price": 9.88
+          },
+          {
+            "name": "Fruit trays Dish 4",
+            "price": 10.22
+          },
+          {
+            "name": "Fruit trays Dish 5",
+            "price": 6.89
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "id": 66,
+          "userId": 495,
+          "rating": 5,
+          "content": "Review content 1 for restaurant 13",
+          "date": "2024-07-26"
+        },
+        {
+          "id": 643,
+          "userId": 529,
+          "rating": 1,
+          "content": "Review content 2 for restaurant 13",
+          "date": "2024-07-16"
+        }
+      ],
+      "orders": [
+        {
+          "id": 57,
+          "userId": 394,
+          "dishes": [
+            {
+              "name": "Fruit trays Dish 1",
+              "price": 17.96
+            },
+            {
+              "name": "Fruit trays Dish 2",
+              "price": 8.89
+            }
+          ],
+          "totalPrice": 18.1,
+          "orderDate": "2024-07-25 13:13",
+          "status": "Completed"
+        },
+        {
+          "id": 736,
+          "userId": 592,
+          "dishes": [
+            {
+              "name": "Fruit trays Dish 1",
+              "price": 17.61
+            },
+            {
+              "name": "Fruit trays Dish 2",
+              "price": 12.57
+            }
+          ],
+          "totalPrice": 38.24,
+          "orderDate": "2024-07-24 13:29",
           "status": "Pending"
         }
       ]
