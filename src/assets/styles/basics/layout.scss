@@ -1,7 +1,7 @@
 .main-container {
   display: grid;
-  grid-template-columns: 80px 1fr 80px;
-  margin-bottom: 90px;
+  grid-template-columns: 1fr minmax(auto, 1280px) 1fr;
+  // margin-bottom: 90px;
 
   > * {
     grid-column: 2;

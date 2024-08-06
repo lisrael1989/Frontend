@@ -1,100 +1,98 @@
 .side-filter-container {
+  grid-row: 1;
+  grid-column: 1;
+  // display: flex;
+  // flex-direction: column;
+  //   min-height: fit-content;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 2px;
+  padding: 8px 16px;
+  max-width: 303px;
+
+  & .filter-header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    & .filter-title {
+      font-size: em(16px);
+      font-weight: bold;
+      color: rgb(10, 56, 71);
+    }
+
+    & .clear-filter-btn {
+      padding: 8px 16px;
+      background-color: inherit;
+      border: none;
+      height: 42px;
+      font-size: em(14px);
+      color: lightblue;
+      cursor: not-allowed;
+
+      &.on {
+        color: blue;
+        cursor: pointer;
+      }
+    }
+  }
+
+  & .preferences-filter-container {
+    width: 100%;
+    padding: 0;
+
+    & p {
+      font-size: 16px;
+      font-weight: bold;
+      padding-bottom: 10px;
+      color: rgb(10, 56, 71);
+    }
+  }
+
+  & .sort-container {
+    display: flex;
+    justify-content: space-between;
     flex-direction: column;
-    min-height: fit-content;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(215, 215, 215);
-    border-radius: 2px;
-    padding: 8px 16px;
-    max-width: 303px;
+    align-items: center;
+    margin-top: 8px;
+    transition: height 0.5s ease-in-out;
+    max-height: 156px;
+    width: 271px;
 
-    & .filter-header {
+    & .sort-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      transition: all 0.3s ease;
+      height: 24px;
+
+      & p {
+        font-size: 16px;
+        font-weight: bold;
+        color: rgb(10, 56, 71);
+        padding: 10px 0 10px 0;
+      }
+
+      & .open-sort-btn {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        width: 100%;
-
-        & .filter-title {
-            font-size: em(16px);
-            font-weight: bold;
-            color: rgb(10, 56, 71);
-        }
-
-        & .clear-filter-btn {
-            padding: 8px 16px;
-            background-color: inherit;
-            border: none;
-            height: 42px;
-            font-size: em(14px);
-            color: lightblue;
-            cursor: not-allowed;
-
-            &.on {
-                color: blue;
-                cursor: pointer;
-            }
-        }
+        justify-content: center;
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+      }
     }
 
-    & .preferences-filter-container {
-        width: 100%;
-        padding: 0;
+    & .open-sort-cmp {
+      transition: height 0.5s ease-in-out;
+      height: 0px;
+      overflow-y: hidden;
 
-        & p {
-            font-size: 16px;
-            font-weight: bold;
-            color: rgb(10, 56, 71);
-        }
+      &.on {
+        height: 130px;
+      }
     }
-
-    & .sort-container {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 8px;
-        transition: height 0.5s ease-in-out;
-        max-height: 156px;
-        width: 271px;
-
-        & .sort-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            transition: all .3s ease;
-            height: 24px;
-
-            & p {
-                font-size: 16px;
-                font-weight: bold;
-                color: rgb(10, 56, 71);
-            }
-
-            & .open-sort-btn {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: none;
-                background-color: inherit;
-                cursor: pointer;
-
-            }
-        }
-
-        & .open-sort-cmp {
-
-            transition: height 0.5s ease-in-out;
-            height: 0px;
-            overflow-y: hidden;
-
-            &.on {
-                height: 130px;
-
-
-            }
-        }
-
-    }
-
+  }
 }

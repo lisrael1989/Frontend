@@ -1,0 +1,10 @@
+.eat-index {
+  display: grid;
+  grid-template-columns: 303px 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  & .right-container {
+    grid-column: 2;
+    grid-row: 1/-1;
+  }
+}

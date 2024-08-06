@@ -1,7 +1,6 @@
 .carousel-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   position: relative;
   padding-left: 22px;
   //   width: 100%;
@@ -9,7 +8,7 @@
   .carousel {
     overflow: hidden;
     width: 100%;
-    max-width: 1200px;
+    max-width: 950px;
     margin-bottom: 20px;
     height: 265px;
     background-color: white;
@@ -25,7 +24,7 @@
 
       .image-card {
         padding-right: 20px;
-        width: 600px;
+        width: 50%;
       }
     }
 
@@ -40,11 +39,8 @@
       flex-wrap: wrap;
       padding-right: 20px;
       justify-content: center;
-      margin: 50px auto;
-    }
-
-    .chakra-stack {
-      width: 600px;
+      margin: auto 0;
+      width: 75%;
     }
   }
 

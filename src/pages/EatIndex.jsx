@@ -16,9 +16,9 @@ export function EatIndex() {
   if (!rests) return <div className="loader"></div>;
   return (
     <>
-      <section className="eat-index flex">
+      <section className="eat-index">
         <SideFilter />
-        <div>
+        <div className="right-container">
           <Carousel />
           <RestList rests={rests} />
         </div>
