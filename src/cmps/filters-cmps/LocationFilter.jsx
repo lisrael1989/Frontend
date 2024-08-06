@@ -20,7 +20,7 @@ export function LocationFilter() {
     debouncedSetFilterBy(updatedFilterBy);
   }
   return (
-    <div className="search-input-wrapper">
+    <div className="search-input-wrapper ">
       <div className="search-icon-place flex">
         <i className="fa-solid fa-location-dot search-icon-place"></i>
         <p className="delivery-to-title">Delivery to:</p>

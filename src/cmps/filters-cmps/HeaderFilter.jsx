@@ -3,9 +3,11 @@ import { TextFilter } from './TextFilter';
 
 export function HeaderFilter() {
   return (
-    <section className="header-filter" style={{ display: 'flex', gap: '20px' }}>
-      <LocationFilter />
-      <TextFilter />
+    <section className="header-filter main-container ">
+      <div className="flex" style={{ gap: '20px' }}>
+        <LocationFilter />
+        <TextFilter />
+      </div>
     </section>
   );
 }
