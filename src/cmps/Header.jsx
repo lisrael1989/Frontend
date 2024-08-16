@@ -1,6 +1,8 @@
 import { HeaderFilter } from './filters-cmps/HeaderFilter';
 
 export function Header() {
+
+
   return (
     <div className="header-main-container">
       <header className="main-container full">

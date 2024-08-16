@@ -1,6 +1,6 @@
-export function RestPreview({ rest }) {
+export function RestPreview({ rest, onSelectRest }) {
   return (
-    <section className="rest-card">
+    <section className="rest-card" onClick={() => onSelectRest(rest.id)}>
       <img className="rest-img" src={rest.image} alt="" />
       <div className="rest-info">
         <h1 className="rest-name">{rest.name}</h1>

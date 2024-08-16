@@ -13,7 +13,7 @@ export function App() {
       <>
         <Routes>
           <Route path="/" element={<EatIndex />} />
-          {/* <Route path="/rest" element={<RestDetails />} /> */}
+          <Route path="/rest/:restId" element={<RestDetails />} />
         </Routes>
       </>
 
