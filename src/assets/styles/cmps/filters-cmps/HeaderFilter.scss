@@ -6,6 +6,28 @@
   grid-column: 1/-1;
   // margin-left: 10px;
   padding: 10px 8px;
+
+  & .back-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+
+    & .back-btn {
+      background-color: transparent;
+      border: none;
+      font-size: 14px;
+      width: max-content;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    & .arrow-back {
+      height: 20px;
+      cursor: pointer;
+    }
+  }
 }
 
 .main-filter {

@@ -5,70 +5,105 @@ import { useParams } from "react-router"
 export function RestDetails() {
     const rests = useSelector((storeState) => storeState.restModule.rests)
     const param = useParams()
-
     const rest = rests.find((rest) => rest.id === param.restId)
+
     useEffect(() => {
-
-
     }, [param.restId])
-
-
-
-
 
     if (!rest) {
         return <div>Restaurant not found</div>;
     }
 
-
-
-
-
-
     return (
-        <section className="rest-details">
-            <img src={rest.image} alt="rest image" />
-            <h1>{rest.name}</h1>
-            <div>
-                <span>⭐</span><span>{rest.rating}</span> <span>({rest.reviews.length})</span> <span><a href="#Reviews">Reviews</a></span>
+        <section className="rest-details full main-container">
+            <div className="rest-img full" style={{ backgroundImage: `url(${rest.image})` }}>
+                <img className="rest-logo" src={rest.image} alt="rest image" />
+
+                <div className="diagonal-bg"></div>
             </div>
-            <div>
-                <span>{rest.category.join(', ')}</span>
-            </div>
-            <div>
-                <span>Delivery fee {rest.shipping.freeShipping ? 'Free' : '$' + rest.shipping.shippingCost} ▪</span>
-                <span> Minimum ${rest.shipping.minOrder}</span>
-            </div>
-            <nav className="menu-category-nav-container">{Object.keys(rest.menu).map((category, idx) => (
-                <div className="menu-category-nav" key={idx}>
-                    <a href={`#${category.replace(/\s+/g, '-')}`}>{category}</a>
+
+            <div className="rest-info">
+                <h1 className="rest-name-title">{rest.name}</h1>
+
+                <div className="rest-rating-info">
+                    <div className="rest-rating-container">
+                        <span className="rating">⭐{rest.rating}</span>
+                        <span>({rest.reviews.length})</span>
+                    </div>
+                    <a className="reviews-link" href="#Reviews">Reviews</a>
                 </div>
-            ))}</nav>
-            <div className="menu-section">
-                {Object.keys(rest.menu).map((category, idx) => (
-                    <div key={idx} className="menu-category" id={category.replace(/\s+/g, '-')}>
-                        <h3>{category}</h3>
-                        <ul>
-                            {rest.menu[category].map((dish, idx) => (
-                                <li key={idx}>
-                                    {dish.name} - {dish.price}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
+
+                <div className="rest-category-info">
+                    <span>{rest.category.join(', ')}</span>
+                </div>
+
+                <div className="rest-shipping-info">
+                    <span>Delivery fee {rest.shipping.freeShipping ? 'Free' : '$' + rest.shipping.shippingCost} ▪</span>
+                    <span> Minimum ${rest.shipping.minOrder}</span>
+                </div>
+
             </div>
-            <section className="reviews-container" id="Reviews">
-                <h4> {"⭐".repeat(Math.round(rest.reviews.reduce((acc, review) => acc + review.rating, 0) / rest.reviews.length))}</h4>
-                <h4>({rest.reviews.length})</h4>
-                {rest.reviews.map((review, idx) => (
-                    <div key={idx} className="review">
-                        <h3>{review.name}</h3>
-                        <span>{review.date}</span>
-                        <span>{"⭐".repeat(review.rating)}</span>
-                        <p>{review.content}</p>
+
+            <nav className="menu-category-nav-container main-container full">
+                <div className="menu-category-layout">
+                    <div className="menu-category-nav">
+                        {Object.keys(rest.menu).map((category, idx) => (
+                            <div className="menu-category-link" key={idx}>
+                                <a href={`#${category.replace(/\s+/g, '-')}`}>{category}</a>
+                            </div>
+                        ))}
                     </div>
-                ))}
+                    <div className="search-meal">
+                        <input type="text" />
+                    </div>
+                </div>
+
+            </nav>
+            <div className="menus-container">
+                <div className="menus-info-container">
+                    {Object.keys(rest.menu).map((category, idx) => (
+                        <div key={idx} className="menu-category" id={category.replace(/\s+/g, '-')}>
+                            <h3>{category}</h3>
+                            <ul>
+                                {rest.menu[category].map((dish, idx) => (
+                                    <li key={idx}>
+                                        <div className="dish-info">
+                                            <span className="dish-name">{dish.name}</span>
+                                            <span className="dish-price">${dish.price}</span>
+                                        </div>
+                                        <div className="dish-img" style={{ backgroundImage: `url(${rest.image})` }}>
+                                            {/* <img src={rest.image} alt="dish image" /> */}
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+                <div className="order-container">
+
+                </div>
+            </div>
+
+            <section className="reviews-container" id="Reviews">
+                <div className="review-title">
+                    <span className="stars-span">{"⭐".repeat(Math.round(rest.reviews.reduce((acc, review) => acc + review.rating, 0) / rest.reviews.length))}</span>
+                    <span className="review-count-span">({rest.reviews.length})</span>
+                </div>
+                <div className="reviews-divider">
+                    {rest.reviews.map((review, idx) => (
+                        <div key={idx} className="review">
+                            <div>
+                                <span>{review.id}</span>
+                                <span className="stars-span">{"⭐".repeat(review.rating)}</span>
+                            </div>
+                            <span>{review.date}</span>
+                            <p>{review.content}</p>
+                        </div>
+                    ))}
+
+                </div>
+
 
             </section>
         </section>
