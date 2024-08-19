@@ -1,0 +1,104 @@
+.order-list-container {
+
+    & .order-section1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        & .order-eta {
+            display: flex;
+            flex-direction: column;
+
+            & h1 {
+                font-size: 14px;
+                margin: 0 0 12px;
+            }
+
+            & div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                & img {
+                    width: 36px;
+                    margin-right: 12px;
+                    transform: scaleX(-1);
+                    height: 36px;
+                }
+
+                & div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    & h2 {
+                        text-align: start;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 14px;
+                        margin: 3px 0 5px 0;
+
+                    }
+
+                    & p {
+                        height: 20px;
+                        display: flex;
+                        font-style: normal;
+                        -webkit-box-align: center;
+                        align-items: center;
+                        font-weight: 400;
+                        font-size: 12px;
+                        text-align: right;
+                        color: #242e30;
+                    }
+                }
+            }
+
+
+        }
+
+        & .order-schedule {
+
+            & h1 {
+                font-size: 14px;
+            }
+
+        }
+
+    }
+
+    & .order-section2 {
+
+        & .order-btn {
+
+            background-color: $link-blue;
+            color: white;
+            height: 50px;
+            width: 100%;
+            letter-spacing: 0.5px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            margin: 0;
+            padding: 12px 0;
+            cursor: pointer;
+            margin-bottom: 16px;
+
+            &:hover {
+                background-color: #0953bd;
+            }
+        }
+
+        & p {
+            color: $title-Black;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 24px;
+            text-align: center;
+            height: 39px;
+        }
+    }
+
+
+}
