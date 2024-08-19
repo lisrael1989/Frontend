@@ -17,7 +17,7 @@ export function RestDetails() {
     return (
         <section className="rest-details full main-container">
             <div className="rest-img full" style={{ backgroundImage: `url(${rest.image})` }}>
-                <img className="rest-logo" src={rest.image} alt="rest image" />
+                <img className="rest-logo" src={rest.logo} alt="rest image" />
 
                 <div className="diagonal-bg"></div>
             </div>
@@ -69,9 +69,10 @@ export function RestDetails() {
                                     <li key={idx}>
                                         <div className="dish-info">
                                             <span className="dish-name">{dish.name}</span>
-                                            <span className="dish-price">${dish.price}</span>
+                                            <span className="dish-description">{dish.description.slice(0, 50)}...</span>
+                                            <span className="dish-price">${dish.price.toFixed(2)}</span>
                                         </div>
-                                        <div className="dish-img" style={{ backgroundImage: `url(${rest.image})` }}>
+                                        <div className="dish-img" style={{ backgroundImage: `url(${dish.image})` }}>
                                             {/* <img src={rest.image} alt="dish image" /> */}
                                         </div>
                                     </li>
@@ -94,7 +95,10 @@ export function RestDetails() {
                     {rest.reviews.map((review, idx) => (
                         <div key={idx} className="review">
                             <div>
-                                <span>{review.id}</span>
+                                <span>{(() => {
+                                    const [firstName, lastName] = review.userName.split(" ")
+                                    return `${firstName} ${lastName.charAt(0)}.`
+                                })()}</span>
                                 <span className="stars-span">{"⭐".repeat(review.rating)}</span>
                             </div>
                             <span>{review.date}</span>

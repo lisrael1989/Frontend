@@ -13,6 +13,7 @@
       },
       "uploadDate": "2024-07-24",
       "image": "https://images.unsplash.com/photo-1512152272829-e3139592d56f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGkP-quiD07fdPozcwfd8y4tuY4ebcYQ8Evw&s",
       "rating": 4.5,
       "kosher": true,
       "shipping": {
@@ -24,111 +25,161 @@
         "Menu Combo": [
           {
             "name": "Hamburger Menu",
-            "price": 8.0
+            "price": 8.0,
+            "description": "Classic beef patty with fresh lettuce, tomato, and our special sauce.",
+            "image": "https://images.unsplash.com/photo-1602192103315-e6dbed88004a?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           },
           {
             "name": "Cheeseburger Menu",
-            "price": 9.5
+            "price": 9.5,
+            "description": "Juicy beef patty topped with melted cheddar cheese.",
+            "image": "https://images.unsplash.com/photo-1603508102983-99b101395d1a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           },
           {
             "name": "Bacon Cheeseburger Menu",
-            "price": 10.5
+            "price": 10.5,
+            "description": "Crispy bacon on top of a succulent cheeseburger.",
+            "image": "https://images.unsplash.com/photo-1592878812901-969d86754f9b"
           },
           {
             "name": "Doppio Cheeseburger Menu",
-            "price": 12.5
+            "price": 12.5,
+            "description": "Double the beef, double the cheese.",
+            "image": "https://images.unsplash.com/photo-1552332386-f8dd00dc2f6b"
           },
           {
             "name": "Doppio Bacon Cheeseburger Menu",
-            "price": 13.5
+            "price": 13.5,
+            "description": "Double beef, double cheese, double bacon.",
+            "image": "https://images.unsplash.com/photo-1571091655789-4cb54b271db5"
           },
           {
             "name": "Smoke Burger Menu",
-            "price": 14.5
+            "price": 14.5,
+            "description": "Smoky flavor with caramelized onions and BBQ sauce.",
+            "image": "https://images.unsplash.com/photo-1599021244324-d166b221a292"
           }
         ],
         "Hot Dog": [
           {
             "name": "Hot Dog Plain",
-            "price": 8.0
+            "price": 8.0,
+            "description": "Classic hot dog with a soft bun and all the toppings.",
+            "image": "https://images.unsplash.com/photo-1603191643996-dfcbe35d08c3"
           },
           {
             "name": "Chorizo Hot Dog",
-            "price": 9.0
+            "price": 9.0,
+            "description": "Spicy chorizo sausage with a kick.",
+            "image": "https://images.unsplash.com/photo-1551446591-142875a901a1"
           },
           {
             "name": "Hot Dog Messicano",
-            "price": 11.5
+            "price": 11.5,
+            "description": "Mexican-style hot dog with jalapeños and avocado.",
+            "image": "https://images.unsplash.com/photo-1624891226817-c4ff16bfa1de"
           },
           {
             "name": "Super Hot Dog",
-            "price": 12.0
+            "price": 12.0,
+            "description": "Loaded hot dog with bacon, cheese, and all the fixings.",
+            "image": "https://images.unsplash.com/photo-1551446591-12c3f11c4db7"
           }
         ],
         "Fritti": [
           {
             "name": "Patatine Dipper",
-            "price": 6.5
+            "price": 6.5,
+            "description": "Crispy potato wedges with a soft interior.",
+            "image": "https://images.unsplash.com/photo-1541544741938-0af808871cc3"
           },
           {
             "name": "Patatine Fritte Speziate",
-            "price": 6.0
+            "price": 6.0,
+            "description": "Spiced fries with a hint of paprika.",
+            "image": "https://images.unsplash.com/photo-1543352630-09328b6cc9a3"
           },
           {
             "name": "Patatine a Fette con Buccia",
-            "price": 6.5
+            "price": 6.5,
+            "description": "Sliced potatoes with skin on, fried to perfection.",
+            "image": "https://images.unsplash.com/photo-1506807803488-8eafc15316c1"
           },
           {
             "name": "Patatine con Bacon, Barbecue e Uovo",
-            "price": 9.0
+            "price": 9.0,
+            "description": "Fries topped with bacon, BBQ sauce, and a fried egg.",
+            "image": "https://images.unsplash.com/photo-1529281392178-4a9a5a0c50d3"
           },
           {
             "name": "Wrustel Chips",
-            "price": 9.5
+            "price": 9.5,
+            "description": "Crispy sausage slices with a side of fries.",
+            "image": "https://images.unsplash.com/photo-1576485436502-dc43c9b5e959"
           },
           {
             "name": "Anelli di Peperoni Pastellati",
-            "price": 7.5
+            "price": 7.5,
+            "description": "Battered pepper rings with a crunchy exterior.",
+            "image": "https://images.unsplash.com/photo-1603298264493-849b85c24cfc"
           }
         ],
         "Bevande e Alcolici": [
           {
             "name": "Bibita in Lattina",
-            "price": 2.5
+            "price": 2.5,
+            "description": "Refreshing canned soda in various flavors.",
+            "image": "https://images.unsplash.com/photo-1554216412-5fa21e42ed58"
           },
           {
             "name": "Bibita 1,5L",
-            "price": 4.0
+            "price": 4.0,
+            "description": "Large 1.5L bottle of your favorite soda.",
+            "image": "https://images.unsplash.com/photo-1570197784894-6a47ddf828d0"
           },
           {
             "name": "Birra 33cl",
-            "price": 4.0
+            "price": 4.0,
+            "description": "33cl bottle of refreshing beer.",
+            "image": "https://images.unsplash.com/photo-1505733043034-0ca32d85f17e"
           },
           {
             "name": "Bibita 66cl",
-            "price": 5.0
+            "price": 5.0,
+            "description": "66cl bottle of soda, perfect for sharing.",
+            "image": "https://images.unsplash.com/photo-1587055352677-92614a8f76b2"
           }
         ],
         "Dolci": [
           {
             "name": "Churros Dulce De Leche",
-            "price": 8.5
+            "price": 8.5,
+            "description": "Churros filled with rich dulce de leche.",
+            "image": "https://images.unsplash.com/photo-1573032555290-ef3f5d70dc8f"
           },
           {
             "name": "Churros Cioccolato Bianco",
-            "price": 8.5
+            "price": 8.5,
+            "description": "Churros filled with creamy white chocolate.",
+            "image": "https://images.unsplash.com/photo-1600044798360-5e4f04b2c728"
           },
           {
             "name": "Churros Nutella",
-            "price": 8.5
+            "price": 8.5,
+            "description": "Churros filled with rich Nutella.",
+            "image": "https://images.unsplash.com/photo-1603046891671-e8c4ed6ce4cf"
           },
           {
             "name": "Tiramisu alla Nutella",
-            "price": 8.5
+            "price": 8.5,
+            "description": "Classic tiramisu with a Nutella twist.",
+            "image": "https://images.unsplash.com/photo-1599785209698-2d854b577db2"
           },
           {
             "name": "Tiramisu Classico",
-            "price": 7.0
+            "price": 7.0,
+            "description": "Traditional tiramisu with coffee and mascarpone.",
+            "image": "https://images.unsplash.com/photo-1599785297400-bbf4c1c1c4c9"
           }
         ]
       },
@@ -136,6 +187,7 @@
         {
           "id": 201,
           "userId": 301,
+          "userName": "John Doe",
           "rating": 5,
           "content": "Great burger, excellent service!",
           "date": "2024-07-01"
@@ -143,6 +195,7 @@
         {
           "id": 204,
           "userId": 304,
+          "userName": "Jane Smith",
           "rating": 5,
           "content": "Best burger in town, I'll come back again!",
           "date": "2024-07-04"

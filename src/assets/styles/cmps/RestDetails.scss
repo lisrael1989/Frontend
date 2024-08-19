@@ -132,7 +132,7 @@
                         font-weight: 700;
                         white-space: nowrap;
                         padding-right: 24px;
-                        color: $title-Black;
+                        color: $text-gray;
                         text-decoration: none;
                     }
                 }
@@ -196,6 +196,13 @@
                                 font-size: 14px;
                                 color: $title-Black;
                                 margin: 0 0 8px;
+                                font-weight: bold;
+
+                            }
+
+                            & .dish-description {
+                                font-size: 14px;
+                                color: $text-gray;
 
                             }
 
