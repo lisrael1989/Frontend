@@ -1,0 +1,137 @@
+.about-rest-container {
+    position: relative;
+
+    & div {
+        & button {
+            border: none;
+            color: $link-blue;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 14px;
+
+        }
+    }
+
+    & .backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+
+        & .modal {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+
+            border-radius: 2px;
+            width: 672px;
+            height: auto;
+            min-height: auto;
+            padding: 30px;
+
+            z-index: 101;
+            background-color: #f8f5f2;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 12px 15px 0px;
+
+            & div {
+                display: flex;
+                flex-direction: row;
+
+                & img {
+                    width: 80px;
+                    height: 80px;
+                    margin-right: 10px;
+                }
+
+                & .rest-information {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    & .rest-name-exit {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 100%;
+
+                        & h1 {
+                            font-size: 22px;
+                            margin-bottom: 7px;
+                            color: $title-Black;
+                        }
+
+                        & .close-btn {
+                            width: 34px;
+                            height: 34px;
+                            text-align: center;
+                            border-radius: 34px;
+                            z-index: 1;
+                            background-color: white;
+                            cursor: pointer;
+                            margin-top: 8px;
+                            color: $title-Black ;
+                            font-weight: bold;
+                            font-size: 15px;
+
+                            &:hover {
+                                background-color: #d7d7d780;
+                            }
+                        }
+                    }
+
+                    & .rest-address-container {
+                        display: flex;
+                        flex-direction: column;
+
+                        & .rest-address,
+                        .rest-phone {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            & .rest-hours {
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+
+                & h1 {
+                    font-size: 20px;
+                    padding: 15px;
+                    background-color: #f0f0f0;
+                    font-weight: bold;
+                }
+
+
+
+                & div {
+                    display: flex;
+                    flex-direction: column;
+
+                    & .day {
+                        min-width: 86px;
+                        margin-right: 8px;
+                        font-size: 14px;
+
+                    }
+
+                    & .hours {
+                        font-size: 14px;
+                        text-align: left;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+}

@@ -582,7 +582,7 @@
         "city": "Haifa"
       },
       "uploadDate": "2024-07-3",
-      "image": "https://example.com/seafood_1.jpg",
+      "image": "https://images.unsplash.com/photo-1672636402078-4b957a572e4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "rating": 4.0,
       "kosher": true,
       "shipping": {
@@ -678,7 +678,7 @@
         "city": "Holon"
       },
       "uploadDate": "2024-07-23",
-      "image": "https://example.com/soup_2.jpg",
+      "image": "https://images.unsplash.com/photo-1478749485505-2a903a729c63?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "rating": 4.6,
       "kosher": false,
       "shipping": {
@@ -774,7 +774,7 @@
         "city": "Bnei Brak"
       },
       "uploadDate": "2024-07-16",
-      "image": "https://example.com/gelato_3.jpg",
+      "image": "https://images.unsplash.com/photo-1648971413826-8377e3c65039?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "rating": 4.5,
       "kosher": false,
       "shipping": {
@@ -870,7 +870,7 @@
         "city": "Holon"
       },
       "uploadDate": "2024-07-4",
-      "image": "https://example.com/sweets_4.jpg",
+      "image": "https://images.unsplash.com/photo-1519691548119-14735e4a11c8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "rating": 3.1,
       "kosher": false,
       "shipping": {
@@ -966,7 +966,7 @@
         "city": "Holon"
       },
       "uploadDate": "2024-07-4",
-      "image": "https://example.com/butcher_5.jpg",
+      "image": "https://images.unsplash.com/photo-1662979887653-7f0e0c4ac539?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "rating": 3.2,
       "kosher": true,
       "shipping": {
@@ -1062,7 +1062,7 @@
         "city": "Ashdod"
       },
       "uploadDate": "2024-07-25",
-      "image": "https://example.com/sweets_6.jpg",
+      "image": "https://images.unsplash.com/photo-1583440772344-edd2e043742c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "rating": 4.4,
       "kosher": true,
       "shipping": {
@@ -1158,7 +1158,7 @@
         "city": "Netanya"
       },
       "uploadDate": "2024-07-5",
-      "image": "https://example.com/pastries_7.jpg",
+      "image": "https://images.unsplash.com/photo-1647544301437-36acef1eff9d?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "rating": 3.2,
       "kosher": false,
       "shipping": {
@@ -1254,7 +1254,7 @@
         "city": "Petah Tikva"
       },
       "uploadDate": "2024-07-22",
-      "image": "https://example.com/juice_8.jpg",
+      "image": "https://images.unsplash.com/photo-1524439786248-e168955562d7?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "rating": 3.9,
       "kosher": false,
       "shipping": {
@@ -1350,7 +1350,7 @@
         "city": "Beersheba"
       },
       "uploadDate": "2024-07-20",
-      "image": "https://example.com/bbq_9.jpg",
+      "image": "https://images.unsplash.com/photo-1529694157872-4e0c0f3b238b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "rating": 4.1,
       "kosher": false,
       "shipping": {
@@ -1446,7 +1446,7 @@
         "city": "Ashdod"
       },
       "uploadDate": "2024-07-9",
-      "image": "https://example.com/cheese shop_10.jpg",
+      "image": "https://images.unsplash.com/photo-1631379578550-7038263db699?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "rating": 3.0,
       "kosher": false,
       "shipping": {
@@ -1542,7 +1542,7 @@
         "city": "Jerusalem"
       },
       "uploadDate": "2024-07-16",
-      "image": "https://example.com/sweets_11.jpg",
+      "image": "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "rating": 3.2,
       "kosher": false,
       "shipping": {
@@ -1638,7 +1638,7 @@
         "city": "Haifa"
       },
       "uploadDate": "2024-07-18",
-      "image": "https://example.com/fruit trays_12.jpg",
+      "image": "https://images.unsplash.com/photo-1530077561647-4c376cd0ee7d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "rating": 3.1,
       "kosher": true,
       "shipping": {
@@ -1734,7 +1734,7 @@
         "city": "Rishon LeZion"
       },
       "uploadDate": "2024-07-24",
-      "image": "https://example.com/fruit trays_13.jpg",
+      "image": "https://images.unsplash.com/photo-1504473089979-b1c4993a9653?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "rating": 3.1,
       "kosher": false,
       "shipping": {
