@@ -3,11 +3,11 @@ import { utilService } from "./util.service"
 const STORAGE_KEY = 'orders';
 
 export const orderService = {
-
+    createOrder,
 }
 
 
-createOrder(orderDetails) {
+function createOrder(orderDetails) {
     return {
         _id: utilService.makeId(),
         userId: '',
