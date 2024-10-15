@@ -3,11 +3,12 @@ import { legacy_createStore as createStore, combineReducers } from 'redux'
 import { restReducer } from './rest.reducer.js'
 
 import { systemReducer } from './loading.reducer.js'
+import { orderReducer } from './order.reducer.js'
 
 const rootReducer = combineReducers({
     restModule: restReducer,
     systemModule: systemReducer,
-
+    orderModule: orderReducer,
 })
 
 

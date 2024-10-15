@@ -11,13 +11,15 @@ export function RestDetails() {
     const param = useParams()
     const rest = rests.find((rest) => rest.id === param.restId)
     const [dishFilter, setDishFilter] = useState("")
+    const [selectedDish, setSelectedDish] = useState("")
 
     useEffect(() => {
         setDishFilter("")
     }, [param.restId])
 
-
-
+    function addedToCart(dish) {
+        setSelectedDish(dish)
+    }
 
     if (!rest) {
         return <div>Restaurant not found</div>;
@@ -92,7 +94,7 @@ export function RestDetails() {
                                 <h3>{category}</h3>
                                 <ul>
                                     {filteredMenu[category].map((dish, idx) => (
-                                        <li key={idx}>
+                                        <li key={idx} onClick={() => addedToCart(dish)}>
                                             <div className="dish-info">
                                                 <span className="dish-name">{dish.name}</span>
                                                 <span className="dish-description">{dish.description.slice(0, 50)}...</span>
@@ -106,7 +108,7 @@ export function RestDetails() {
                         ))}
                     </div>
                     <div className="order-container">
-                        <OrderList rest={rest} />
+                        <OrderList rest={rest} dish={selectedDish} />
                     </div>
                 </div>
             </div>

@@ -1,7 +1,11 @@
-export function OrderList({ rest }) {
+import { useNavigate } from "react-router"
 
+export function OrderList({ rest, dish }) {
+    const navigate = useNavigate()
 
-
+    function onProceedToCheckOut() {
+        navigate('/payment')
+    }
 
     return (
         <div className="order-list-container">
@@ -22,8 +26,16 @@ export function OrderList({ rest }) {
             </div>
 
             <div className="order-section2">
-                <button className="order-btn">Proceed to payment</button>
-                <p>Your cart is empty</p>
+                {!dish ?
+                    <button className="order-btn-disable">Proceed to payment</button>
+                    :
+                    <button className="order-btn" onClick={() => onProceedToCheckOut()}>Proceed to payment</button>
+                }
+                {!dish ?
+                    <p>Your cart is empty</p>
+                    :
+                    <p>{dish.name}</p>
+                }
             </div>
             <div className="order-section3">
             </div>
